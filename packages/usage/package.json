@@ -25,6 +25,8 @@
     },
     "dependencies": {
         "@fun-ts/elmish": "^0.0.1-alpha.0",
+        "@fun-ts/elmish-react": "*",
+        "@fun-ts/elmish-preact": "*",
         "@fun-ts/fetch": "^0.0.1-alpha.0",
         "@fun-ts/rest": "^0.0.1-alpha.0"
     }
