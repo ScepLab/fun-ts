@@ -2,9 +2,11 @@
     "version": "0.1",
     "language": "en",
     "words": [
+        "bimap",
         "elmish",
         "eqeqeq",
         "esbuild",
+        "Howto",
         "hyrious",
         "importsort",
         "jphilipps",
@@ -12,10 +14,11 @@
         "Müller",
         "outfile",
         "Philipps",
+        "preminor",
+        "prepatch",
         "riteway",
         "Taskified",
-        "taskify",
-        "bimap"
+        "taskify"
     ],
     "flagWords": []
 }

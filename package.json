@@ -41,13 +41,14 @@
         "init": "npm run clean-build && npm i && npm run build",
         "clean": "npx --yes lerna run clean --stream && rm -rf ./node_modules",
         "clean-build": "npx --yes lerna run clean-build --stream && rm -rf ./dist && rm -rf ./dist-test",
+        "update-changelog": "env-cmd lerna-changelog",
         "- BUILD -------------------------------------------": "echo 'unused'",
         "build": "lerna run build --stream",
         "build-elmish": "lerna run build --stream --scope=@fun-ts/elmish",
         "build-fetch": "lerna run build --stream --scope=@fun-ts/fetch",
         "build-rest": "lerna run build --stream --scope=@fun-ts/rest",
         "build-usage": "lerna run build --stream --scope=@fun-ts/usage",
-        "- TEST -------------------------------------------": "echo 'unused'",
+        "- TEST --------------------------------------------": "echo 'unused'",
         "test": "lerna run test --stream",
         "test-elmish": "lerna run test --stream --scope=@fun-ts/elmish",
         "test-fetch": "lerna run test --stream --scope=@fun-ts/fetch",
@@ -59,16 +60,24 @@
         "check-fetch": "lerna run check --stream --scope=@fun-ts/fetch",
         "check-rest": "lerna run check --stream --scope=@fun-ts/rest",
         "check-usage": "lerna run check --stream --scope=@fun-ts/usage",
-        "- FIX -------------------------------------------": "echo 'unused'",
+        "- FIX ---------------------------------------------": "echo 'unused'",
         "fix": "lerna run fix --stream",
         "fix-elmish": "lerna run fix --stream --scope=@fun-ts/elmish",
         "fix-fetch": "lerna run fix --stream --scope=@fun-ts/fetch",
         "fix-rest": "lerna run fix --stream --scope=@fun-ts/rest",
         "fix-usage": "lerna run fix --stream --scope=@fun-ts/usage",
-        "- PUBLISH -------------------------------------------": "echo 'unused'",
+        "- PUBLISH -----------------------------------------": "echo 'unused'",
+        "publish-check": "npm run build && npm run check && npm run test",
         "publish-elmish": "lerna run publish --stream --scope=@fun-ts/elmish",
         "publish-fetch": "lerna run publish --stream --scope=@fun-ts/fetch",
         "publish-rest": "lerna run publish --stream --scope=@fun-ts/rest"
+    },
+    "changelog": {
+        "labels": {
+            "Type: Feature": "Features",
+            "Type: Bug": "Bug fixes",
+            "Type: Enhancement": "Enhancements"
+        }
     },
     "dependencies": {
         "fp-ts": "2.11.9",
@@ -77,6 +86,8 @@
         "tslib": "2.3.1"
     },
     "devDependencies": {
+        "env-cmd": "10.1.0",
+        "lerna-changelog": "2.2.0",
         "npm-run-all": "4.1.5",
         "lerna": "4.0.0",
         "@faker-js/faker": "6.1.2",
