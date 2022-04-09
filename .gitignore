@@ -45,18 +45,24 @@ lerna-debug.log
 
 # node_modules from packages are normally not created only for test purposes
 packages/elmish/node_modules
+packages/elmish-react/node_modules
+packages/elmish-preact/node_modules
 packages/fetch/node_modules
 packages/rest/node_modules
 packages/usage/node_modules
 
 # build output
 packages/elmish/dist/
+packages/elmish-react/dist/
+packages/elmish-preact/dist/
 packages/fetch/dist/
 packages/rest/dist/
 packages/usage/dist/
 
 # test builds
 packages/elmish/dist-test/
+packages/elmish-react/dist-test/
+packages/elmish-preact/dist-test/
 packages/fetch/dist-test/
 packages/rest/dist-test/
 packages/usage/dist-test/
