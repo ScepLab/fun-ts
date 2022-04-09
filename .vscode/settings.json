@@ -1,0 +1,45 @@
+{
+    "editor.rulers": [
+        79
+    ],
+    "files.eol": "\n",
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
+    "npm-intellisense.importQuotes": "\"",
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": false,
+    "editor.autoIndent": "full",
+    "javascript.preferences.quoteStyle": "double",
+    "typescript.tsdk": "node_modules/typescript/lib",
+    "typescript.preferences.quoteStyle": "double",
+    "typescript.format.semicolons": "insert",
+    "[markdown]": {
+        "files.trimTrailingWhitespace": false,
+    },
+    "[plaintext]": {
+        "files.trimTrailingWhitespace": false,
+    },
+    "[json]": {
+        "editor.wordWrap": "bounded",
+        "editor.wordWrapColumn": 79,
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[typescript]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "vscode.typescript-language-features",
+    },
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features",
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features",
+        "editor.formatOnSave": true
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features",
+        "editor.formatOnSave": true
+    }
+}

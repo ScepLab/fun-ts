@@ -1,0 +1,65 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# compiled output
+/dist
+/tmp
+/out-tsc
+
+# dependencies
+/node_modules
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# misc
+/connect.lock
+/coverage
+/libpeerconnection.log
+npm-debug.log
+yarn-error.log
+testem.log
+/typings
+
+# System Files
+.DS_Store
+Thumbs.db
+lerna-debug.log
+
+# env definitions should be only local available
+.env
+.env.local
+.env.*.local
+
+# node_modules from packages are normally not created only for test purposes
+packages/elmish/node_modules
+packages/fetch/node_modules
+packages/rest/node_modules
+packages/usage/node_modules
+
+# build output
+packages/elmish/dist/
+packages/fetch/dist/
+packages/rest/dist/
+packages/usage/dist/
+
+# test builds
+packages/elmish/dist-test/
+packages/fetch/dist-test/
+packages/rest/dist-test/
+packages/usage/dist-test/
+
+# ignore files
+*.tsbuildinfo

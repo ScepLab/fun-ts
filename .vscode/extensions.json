@@ -1,0 +1,14 @@
+{
+    "recommendations": [
+        "dbaeumer.vscode-eslint",
+        "amatiasq.sort-imports",
+        "aaron-bond.better-comments",
+        "editorconfig.editorconfig",
+        "wix.vscode-import-cost",
+        "christian-kohler.npm-intellisense",
+        "pflannery.vscode-versionlens",
+        "juan-ojeda-dev.fp-ts-snippets",
+        "rintoj.blank-line-organizer",
+        "dinhani.divider",
+    ]
+}

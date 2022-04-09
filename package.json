@@ -1,0 +1,99 @@
+{
+    "name": "fun-ts",
+    "description": "Monorepo with features like the elmish architecture or a rest client based on functional programming with TypeScript.",
+    "author": {
+        "name": "Jonathan Philipps",
+        "url": "https://github.com/jphilipps"
+    },
+    "contributors": [
+        {
+            "name": "Thomas Müller",
+            "url": "https://github.com/tmueller"
+        }
+    ],
+    "license": "MIT",
+    "version": "0.0.0",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/jphilipps/fun-ts.git"
+    },
+    "bugs": {
+        "url": "https://github.com/jphilipps/fun-ts/issues"
+    },
+    "engineStrict": true,
+    "engines": {
+        "node": ">=16.14.0",
+        "npm": ">=8.1.3"
+    },
+    "keywords": [
+        "fun",
+        "typescript",
+        "functional-programming",
+        "elmish",
+        "rest",
+        "fetch"
+    ],
+    "workspaces": [
+        "./packages/*"
+    ],
+    "scripts": {
+        "- SETUP -------------------------------------------": "echo 'unused'",
+        "init": "npm run clean-build && npm i && npm run build",
+        "clean": "npx --yes lerna run clean --stream && rm -rf ./node_modules",
+        "clean-build": "npx --yes lerna run clean-build --stream && rm -rf ./dist && rm -rf ./dist-test",
+        "- BUILD -------------------------------------------": "echo 'unused'",
+        "build": "lerna run build --stream",
+        "build-elmish": "lerna run build --stream --scope=@fun-ts/elmish",
+        "build-fetch": "lerna run build --stream --scope=@fun-ts/fetch",
+        "build-rest": "lerna run build --stream --scope=@fun-ts/rest",
+        "build-usage": "lerna run build --stream --scope=@fun-ts/usage",
+        "- TEST -------------------------------------------": "echo 'unused'",
+        "test": "lerna run test --stream",
+        "test-elmish": "lerna run test --stream --scope=@fun-ts/elmish",
+        "test-fetch": "lerna run test --stream --scope=@fun-ts/fetch",
+        "test-rest": "lerna run test --stream --scope=@fun-ts/rest",
+        "test-usage": "lerna run test --stream --scope=@fun-ts/usage",
+        "- CHECK -------------------------------------------": "echo 'unused'",
+        "check": "lerna run check --stream",
+        "check-elmish": "lerna run check --stream --scope=@fun-ts/elmish",
+        "check-fetch": "lerna run check --stream --scope=@fun-ts/fetch",
+        "check-rest": "lerna run check --stream --scope=@fun-ts/rest",
+        "check-usage": "lerna run check --stream --scope=@fun-ts/usage",
+        "- FIX -------------------------------------------": "echo 'unused'",
+        "fix": "lerna run fix --stream",
+        "fix-elmish": "lerna run fix --stream --scope=@fun-ts/elmish",
+        "fix-fetch": "lerna run fix --stream --scope=@fun-ts/fetch",
+        "fix-rest": "lerna run fix --stream --scope=@fun-ts/rest",
+        "fix-usage": "lerna run fix --stream --scope=@fun-ts/usage"
+    },
+    "dependencies": {
+        "fp-ts": "2.11.9",
+        "io-ts": "2.2.16",
+        "@morphic-ts/adt": "3.0.0",
+        "tslib": "2.3.1"
+    },
+    "devDependencies": {
+        "npm-run-all": "4.1.5",
+        "lerna": "4.0.0",
+        "@faker-js/faker": "6.1.2",
+        "express": "4.17.3",
+        "@typescript-eslint/eslint-plugin": "5.18.0",
+        "@typescript-eslint/parser": "5.18.0",
+        "cspell": "5.19.7",
+        "jshint": "2.13.4",
+        "rimraf": "3.0.2",
+        "typescript": "4.6.3",
+        "esbuild": "0.14.34",
+        "import-sort": "6.0.0",
+        "import-sort-cli": "6.0.0",
+        "import-sort-parser-typescript": "6.0.0",
+        "import-sort-style-react2": "0.3.6",
+        "esbuild-node-externals": "1.4.1",
+        "type-fest": "2.12.2",
+        "@tsconfig/strictest": "1.0.0",
+        "husky": "7.0.4",
+        "riteway": "6.3.1",
+        "@hyrious/esbuild-dev": "0.7.5",
+        "tap-nirvana": "1.1.0"
+    }
+}

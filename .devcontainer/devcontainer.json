@@ -1,0 +1,24 @@
+{
+    "name": "fun-ts DEV",
+    "build": {
+        "dockerfile": "Dockerfile",
+    },
+    "extensions": [
+        "dbaeumer.vscode-eslint",
+        "amatiasq.sort-imports",
+        "aaron-bond.better-comments",
+        "editorconfig.editorconfig",
+        "wix.vscode-import-cost",
+        "christian-kohler.npm-intellisense",
+        "pflannery.vscode-versionlens",
+        "juan-ojeda-dev.fp-ts-snippets",
+        "rintoj.blank-line-organizer",
+        "dinhani.divider",
+    ],
+    "mounts": [
+        "source=${localEnv:HOME}${localEnv:USERPROFILE}/.gitconfig,target=/root/.gitconfig,type=bind,consistency=cached,readonly",
+        "source=${localEnv:HOME}${localEnv:USERPROFILE}/.config/git,target=/root/.config/git,type=bind,consistency=cached,readonly",
+        "source=${localEnv:HOME}${localEnv:USERPROFILE}/.ssh,target=/root/.ssh,type=bind,consistency=cached",
+    ],
+    "postCreateCommand": "npm run init",
+}

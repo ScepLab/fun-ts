@@ -1,0 +1,51 @@
+{
+    "name": "@fun-ts/rest",
+    "description": "REST API definition and usage based on functional TypeScript.",
+    "author": {
+        "name": "Jonathan Philipps",
+        "url": "https://github.com/jphilipps"
+    },
+    "contributors": [
+        {
+            "name": "Thomas Müller",
+            "url": "https://github.com/tmueller"
+        }
+    ],
+    "license": "MIT",
+    "version": "0.0.0",
+    "module": "./dist/index.js",
+    "main": "./dist/index.cjs",
+    "types": "./dist/index.d.ts",
+    "type": "module",
+    "sideEffects": false,
+    "engineStrict": true,
+    "engines": {
+        "node": ">=16.14.0",
+        "npm": ">=8.1.3"
+    },
+    "scripts": {
+        "- SETUP -------------------------------------------": "echo 'unused'",
+        "init": "npm run clean && npm i && npm run build && npm run check",
+        "- BUILD -------------------------------------------": "echo 'unused'",
+        "build": "npm run -s clean-build && tsc -p ./tsconfig.json && node ./esbuild.config.js",
+        "- CLEAN -------------------------------------------": "echo 'unused'",
+        "clean": "npm run -s clean-build",
+        "clean-build": "rm -rf ./dist-test && rm -rf ./dist",
+        "- CHECK -------------------------------------------": "echo 'unused'",
+        "check": "npm run -s check-eslint && npm run -s check-cspell && npm run -s check-tsc && npm run -s check-importsort",
+        "check-eslint": "eslint \"./src/**/*.{ts,tsx}\"",
+        "check-cspell": "cspell ./src/**/*.{ts,tsx} ./src/**/*.html ./src/**/*.less ./src/**/*.sass ./src/**/*.css",
+        "check-tsc": "tsc --noEmit --emitDeclarationOnly false",
+        "check-importsort": "import-sort -l ./src/**/*.{ts,tsx}",
+        "- FIX ---------------------------------------------": "echo 'unused'",
+        "fix": "npm run -s fix-eslint && npm run -s fix-importsort",
+        "fix-eslint": "eslint --fix \"./src/**/*.{ts,tsx}\"",
+        "fix-importsort": "import-sort --write ./src/**/*.{ts,tsx}"
+    },
+    "peerDependencies": {
+        "@types/express-serve-static-core": "~4.17.28"
+    },
+    "dependencies": {
+        "@fun-ts/fetch": "*"
+    }
+}
