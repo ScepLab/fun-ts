@@ -64,7 +64,11 @@
         "fix-elmish": "lerna run fix --stream --scope=@fun-ts/elmish",
         "fix-fetch": "lerna run fix --stream --scope=@fun-ts/fetch",
         "fix-rest": "lerna run fix --stream --scope=@fun-ts/rest",
-        "fix-usage": "lerna run fix --stream --scope=@fun-ts/usage"
+        "fix-usage": "lerna run fix --stream --scope=@fun-ts/usage",
+        "- PUBLISH -------------------------------------------": "echo 'unused'",
+        "publish-elmish": "lerna run publish --stream --scope=@fun-ts/elmish",
+        "publish-fetch": "lerna run publish --stream --scope=@fun-ts/fetch",
+        "publish-rest": "lerna run publish --stream --scope=@fun-ts/rest"
     },
     "dependencies": {
         "fp-ts": "2.11.9",
