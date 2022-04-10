@@ -38,7 +38,9 @@
         "- FIX ---------------------------------------------": "echo 'unused'",
         "fix": "npm run -s fix-eslint && npm run -s fix-importsort",
         "fix-eslint": "eslint --fix \"./src/**/*.{ts,tsx}\"",
-        "fix-importsort": "import-sort --write ./src/**/*.{ts,tsx}"
+        "fix-importsort": "import-sort --write ./src/**/*.{ts,tsx}",
+        "- PUBLISH -----------------------------------------": "echo 'unused'",
+        "publish": "npm publish"
     },
     "peerDependencies": {
         "@types/express-serve-static-core": "^4.17.28"
