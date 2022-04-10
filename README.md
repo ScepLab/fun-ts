@@ -4,7 +4,7 @@
 
 [![fun-ts build](https://github.com/jphilipps/fun-ts/actions/workflows/fun-ts-build.yml/badge.svg)](https://github.com/jphilipps/fun-ts/actions/workflows/fun-ts-build.yml)
 
-[![fetch release](https://github.com/jphilipps/fun-ts/actions/workflows/publish-fetch.yml/badge.svg)](https://github.com/jphilipps/fun-ts/actions/workflows/publish-fetch.yml)
+[![release and publish packages](https://github.com/jphilipps/fun-ts/actions/workflows/publish.yml/badge.svg)](https://github.com/jphilipps/fun-ts/actions/workflows/publish.yml)
 
 ## Contribution and guidelines for developer
 
