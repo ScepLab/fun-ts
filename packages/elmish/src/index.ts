@@ -1,2 +1,7 @@
-export * as cmd from "./cmd";
-export * from "./core";
+import * as cmd from "./cmd";
+import * as core from "./core";
+
+export {
+    core,
+    cmd,
+};

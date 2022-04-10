@@ -12,7 +12,6 @@
         }
     ],
     "license": "MIT",
-    "version": "0.0.0",
     "repository": {
         "type": "git",
         "url": "https://github.com/jphilipps/fun-ts.git"
@@ -38,7 +37,7 @@
     ],
     "scripts": {
         "- SETUP -------------------------------------------": "echo 'unused'",
-        "init": "npm run clean-build && npx husky i && npm i && npm run build",
+        "init": "npm run clean-build && npx husky i -y && npm i && npm run build",
         "clean": "npx --yes lerna run clean --stream && rm -rf ./node_modules",
         "clean-build": "npx --yes lerna run clean-build --stream && rm -rf ./dist && rm -rf ./dist-test",
         "update-changelog": "env-cmd lerna-changelog",

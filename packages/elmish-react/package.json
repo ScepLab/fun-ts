@@ -24,11 +24,6 @@
         "npm": ">=8.1.3"
     },
     "scripts": {
-        "- TEST --------------------------------------------": "echo 'unused'",
-        "test": "npm run -s check-tsc && npm run -s test-rite",
-        "test-rite": "esbuild-dev --cjs test/index.test.ts",
-        "test-rite-human": "npm run -s test-rite | tap-nirvana",
-        "test-rite-watch": "esbuild-dev -w --cjs ./test/index.watch.test.ts | tap-nirvana",
         "- BUILD -------------------------------------------": "echo 'unused'",
         "build": "npm run -s clean-build && tsc -p ./tsconfig.json && node ./esbuild.config.js",
         "- CLEAN -------------------------------------------": "echo 'unused'",

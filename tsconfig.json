@@ -23,5 +23,25 @@
         "noImplicitThis": true,
         "emitDeclarationOnly": true,
         "importsNotUsedAsValues": "remove"
-    }
+    },
+    "references": [
+        {
+            "path": "./packages/elmish"
+        },
+        {
+            "path": "./packages/elmish-preact"
+        },
+        {
+            "path": "./packages/elmish-react"
+        },
+        {
+            "path": "./packages/fetch"
+        },
+        {
+            "path": "./packages/rest"
+        },
+        {
+            "path": "./packages/usage"
+        },
+    ]
 }
