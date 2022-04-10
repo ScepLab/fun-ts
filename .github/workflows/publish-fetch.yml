@@ -14,6 +14,7 @@ jobs:
                   node-version: 16.14.2
                   registry-url: "https://registry.npmjs.org"
             - run: npm ci
+            - run: npm run build
             - run: npm run check-fetch
             - run: npm run test-fetch
             - run: npm run publish-fetch
