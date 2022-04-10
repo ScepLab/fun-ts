@@ -9,3 +9,7 @@
 ## Contribution and guidelines for developer
 
 [dev-readme](DEV-README.md)
+
+## License
+
+The MIT License (MIT)
