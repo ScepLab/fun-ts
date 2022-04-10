@@ -1,4 +1,4 @@
-name: release and publish packages
+name: publish packages
 
 on:
     release:
@@ -17,8 +17,6 @@ jobs:
             - run: npm run build
             - run: npm run check
             - run: npm run test
-            - run: npm run publish-fetch
-            - run: npm run publish-elmish
-            - run: npm run publish-elmish-preact
+            - run: npm run publish
               env:
                   NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

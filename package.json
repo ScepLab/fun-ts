@@ -72,6 +72,7 @@
         "fix-rest": "lerna run fix --stream --scope=@fun-ts/rest",
         "fix-usage": "lerna run fix --stream --scope=@fun-ts/usage",
         "- PUBLISH -----------------------------------------": "echo 'unused'",
+        "publish": "npm run publish-elmish && npm run publish-elmish-preact && npm run publish-fetch",
         "publish-check": "npm run build && npm run check && npm run test",
         "publish-elmish": "lerna run publish --stream --scope=@fun-ts/elmish",
         "publish-elmish-react": "lerna run publish --stream --scope=@fun-ts/elmish-react",
