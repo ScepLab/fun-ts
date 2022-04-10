@@ -1,4 +1,4 @@
-import * as A from "fp-ts/ReadOnlyArray";
+import * as A from "fp-ts/ReadonlyArray";
 
 import { Dispatch, Subscription } from "./core";
 
