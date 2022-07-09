@@ -64,6 +64,17 @@ export const withBadStatus = <L extends FetchError>(
 );
 
 // ============================================================================
+// default options combinator
+// TODO: Deep merge
+// ============================================================================
+export const withDefaults = (defaults: RequestInit) => <L extends FetchError>(
+    funFetch: TaskifiedFetch<L>
+): TaskifiedFetch<L> => (input, init = {}) => funFetch(
+    input,
+    { ...defaults, ...init }
+);
+
+// ============================================================================
 // Parsing responses
 // ============================================================================
 const badPayloadError = (
