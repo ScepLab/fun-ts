@@ -47,5 +47,8 @@
     },
     "peerDependencies": {
         "preact": "^10.7.1"
+    },
+    "devDependencies": {
+        "preact": "^10.7.1"
     }
 }

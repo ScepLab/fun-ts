@@ -39,5 +39,16 @@
         "fix": "npm run -s fix-eslint && npm run -s fix-importsort",
         "fix-eslint": "eslint --fix \"./src/**/*.{ts,tsx}\"",
         "fix-importsort": "import-sort --write ./src/**/*.{ts,tsx}"
+    },
+    "dependencies": {
+        "@fun-ts/elmish": "^0.1.1"
+    },
+    "peerDependencies": {
+        "react": "^18.0.0"
+    },
+    "devDependencies": {
+        "react": "^18.0.0",
+        "@types/react": "^18.0.0",
+        "@types/react-dom": "^18.0.0"
     }
 }
