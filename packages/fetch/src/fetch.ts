@@ -3,8 +3,11 @@ import * as E from "fp-ts/Either";
 import * as O from "fp-ts/Option";
 import * as T from "fp-ts/Task";
 import * as TE from "fp-ts/TaskEither";
+import * as t from "io-ts";
 
 import { FunctionN, flow, pipe } from "fp-ts/function";
+
+import { failure as reportIoTsFailure } from "io-ts/PathReporter";
 
 // ============================================================================
 // Fetch
@@ -126,6 +129,27 @@ export const asArrayBuffer = (r: Response) => TE.tryCatch(
 );
 
 export const asArrayBufferTE = TE.chainW(asArrayBuffer);
+
+// ============================================================================
+// io-ts
+// ============================================================================
+const decodeError = (
+    errors: t.Errors
+) => ({
+    type: "DecodeError" as const,
+    error: reportIoTsFailure(errors),
+    errors
+});
+
+export const asDecoded = <A>(dec: t.Decoder<unknown, A>) => flow(
+    dec.decode,
+    E.mapLeft(decodeError)
+);
+
+export const asDecodedTE = <A>(dec: t.Decoder<unknown, A>) => pipe(
+    asDecoded(dec),
+    TE.chainEitherKW
+);
 
 // ============================================================================
 // Json combinator
