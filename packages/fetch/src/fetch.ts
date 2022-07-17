@@ -97,25 +97,35 @@ export const asJson = (r: Response) => TE.tryCatch(
     toBadPayloadError(r)
 );
 
+export const asJsonTE = TE.chainW(asJson);
+
 export const asText = (r: Response) => TE.tryCatch(
     () => r.text(),
     toBadPayloadError(r)
 );
+
+export const asTextTE = TE.chainW(asText);
 
 export const asBlob = (r: Response) => TE.tryCatch(
     () => r.blob(),
     toBadPayloadError(r)
 );
 
+export const asBlobTE = TE.chainW(asBlob);
+
 export const asFormData = (r: Response) => TE.tryCatch(
     () => r.formData(),
     toBadPayloadError(r)
 );
 
+export const asFormDataTE = TE.chainW(asFormData);
+
 export const asArrayBuffer = (r: Response) => TE.tryCatch(
     () => r.arrayBuffer(),
     toBadPayloadError(r)
 );
+
+export const asArrayBufferTE = TE.chainW(asArrayBuffer);
 
 // ============================================================================
 // Json combinator
@@ -127,7 +137,7 @@ export const withJson = <L extends FetchError>(
         funFetch,
         withDefaults({ headers: { "Content-Type": "application/json" } })
     ),
-    TE.chainW(asJson)
+    asJsonTE
 );
 
 // ============================================================================
