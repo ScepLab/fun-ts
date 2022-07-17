@@ -5,6 +5,11 @@
         "outDir": "./dist",
         "allowSyntheticDefaultImports": true
     },
+    "references": [
+        {
+            "path": "../elmish"
+        }
+    ],
     "include": [
         "./src"
     ]

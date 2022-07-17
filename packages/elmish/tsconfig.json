@@ -5,6 +5,7 @@
         "outDir": "./dist",
         "emitDeclarationOnly": true,
         "esModuleInterop": true,
+        "composite": true,
     },
     "include": [
         "./src"

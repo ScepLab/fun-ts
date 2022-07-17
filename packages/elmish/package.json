@@ -25,7 +25,7 @@
     },
     "scripts": {
         "- BUILD -------------------------------------------": "echo 'unused'",
-        "build": "npm run -s clean-build && tsc -p ./tsconfig.json && node ./esbuild.config.js",
+        "build": "npm run -s clean-build && tsc -p ./tsconfig.json --composite false && node ./esbuild.config.js",
         "- CLEAN -------------------------------------------": "echo 'unused'",
         "clean": "npm run -s clean-build",
         "clean-build": "rm -rf ./dist-test && rm -rf ./dist",
