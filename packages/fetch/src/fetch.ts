@@ -118,11 +118,24 @@ export const asArrayBuffer = (r: Response) => TE.tryCatch(
 );
 
 // ============================================================================
+// Json combinator
+// ============================================================================
+export const withJson = <L extends FetchError>(
+    funFetch: TaskifiedFetch<L>
+) => flow(
+    pipe(
+        funFetch,
+        withDefaults({ headers: { "Content-Type": "application/json" } })
+    ),
+    TE.chainW(asJson)
+);
+
+// ============================================================================
 // Timeout combinator
 // ============================================================================
 const timeoutError = (ms: number) => ({
     type: "Timeout" as const,
-    error: new Error(`TimedOut after ${ms}ms.`)
+    error: new Error(`Timed out after ${ms}ms.`)
 });
 
 const raceTE = <L, R>(
@@ -193,7 +206,7 @@ export const withTimeout = (
 ) => <L extends FetchError>(
     funFetch: TaskifiedFetch<L>
 ) => (
-    input: RequestInfo,
+    input: RequestInfo | URL,
     init: RequestInit = {}
 ) => pipe(
     startTimeout(ms),
