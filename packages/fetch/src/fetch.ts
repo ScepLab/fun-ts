@@ -206,7 +206,7 @@ export const withTimeout = (
 ) => <L extends FetchError>(
     funFetch: TaskifiedFetch<L>
 ) => (
-    input: RequestInfo | URL,
+    input: RequestInfo,
     init: RequestInit = {}
 ) => pipe(
     startTimeout(ms),
