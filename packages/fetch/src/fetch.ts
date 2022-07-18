@@ -3,9 +3,9 @@ import * as E from "fp-ts/Either";
 import * as O from "fp-ts/Option";
 import * as T from "fp-ts/Task";
 import * as TE from "fp-ts/TaskEither";
-import * as t from "io-ts";
 
 import { FunctionN, flow, pipe } from "fp-ts/function";
+import { Decoder as IoTsDecoder, Errors as IoTsErrors } from "io-ts";
 
 import { failure as reportIoTsFailure } from "io-ts/PathReporter";
 
@@ -134,19 +134,19 @@ export const asArrayBufferTE = TE.chainW(asArrayBuffer);
 // io-ts
 // ============================================================================
 const decodeError = (
-    errors: t.Errors
+    errors: IoTsErrors
 ) => ({
     type: "DecodeError" as const,
     error: reportIoTsFailure(errors),
     errors
 });
 
-export const asDecoded = <A>(dec: t.Decoder<unknown, A>) => flow(
+export const asDecoded = <A>(dec: IoTsDecoder<unknown, A>) => flow(
     dec.decode,
     E.mapLeft(decodeError)
 );
 
-export const asDecodedTE = <A>(dec: t.Decoder<unknown, A>) => pipe(
+export const asDecodedTE = <A>(dec: IoTsDecoder<unknown, A>) => pipe(
     asDecoded(dec),
     TE.chainEitherKW
 );

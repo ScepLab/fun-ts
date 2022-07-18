@@ -50,6 +50,9 @@
         "- Deliver -----------------------------------------": "echo 'unused'",
         "deliver": "npm publish"
     },
+    "dependencies": {
+        "fp-ts": "^2.12.1"
+    },
     "peerDependencies": {
         "io-ts": "^2.2.16"
     },
