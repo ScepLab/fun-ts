@@ -1,6 +1,7 @@
 {
     "name": "@fun-ts/elmish-react-usage",
     "description": "Shows examples and the usage of the elmish-react package.",
+    "private": false,
     "author": {
         "name": "Jonathan Philipps",
         "url": "https://github.com/jphilipps"

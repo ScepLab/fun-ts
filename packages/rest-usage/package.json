@@ -1,6 +1,7 @@
 {
     "name": "@fun-ts/rest-usage",
     "description": "Shows examples and the usage of the rest package.",
+    "private": false,
     "author": {
         "name": "Jonathan Philipps",
         "url": "https://github.com/jphilipps"
