@@ -28,7 +28,7 @@
         "build": "npm run -s clean-build && tsc -p ./tsconfig.json && node ./esbuild.config.js",
         "- CLEAN -------------------------------------------": "echo 'unused'",
         "clean": "npm run -s clean-build",
-        "clean-build": "rm -rf ./dist-test && rm -rf ./dist",
+        "clean-build": "rimraf ./dist-test && rimraf ./dist",
         "- CHECK -------------------------------------------": "echo 'unused'",
         "check": "npm run -s check-eslint && npm run -s check-cspell && npm run -s check-tsc && npm run -s check-importsort",
         "check-eslint": "eslint \"./src/**/*.{ts,tsx}\"",

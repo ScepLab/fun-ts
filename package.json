@@ -38,8 +38,8 @@
     "scripts": {
         "- SETUP -------------------------------------------": "echo 'unused'",
         "init": "npm run clean-build && npx husky i -y && npm i && npm run build",
-        "clean": "npx --yes lerna run clean --stream && rm -rf ./node_modules",
-        "clean-build": "npx --yes lerna run clean-build --stream && rm -rf ./dist && rm -rf ./dist-test",
+        "clean": "npx lerna run clean --stream && npx rimraf ./node_modules",
+        "clean-build": "npx lerna run clean-build --stream && npx rimraf ./dist && npx rimraf ./dist-test",
         "update-changelog": "env-cmd lerna-changelog",
         "- BUILD -------------------------------------------": "echo 'unused'",
         "build": "lerna run build --stream",
