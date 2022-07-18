@@ -1,7 +1,6 @@
 {
     "name": "@fun-ts/rest",
     "description": "REST API definition and usage based on functional TypeScript.",
-    "private": false,
     "author": {
         "name": "Jonathan Philipps",
         "url": "https://github.com/jphilipps"

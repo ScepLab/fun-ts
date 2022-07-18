@@ -1,7 +1,6 @@
 {
     "name": "@fun-ts/fetch-usage",
     "description": "Shows examples and the usage of the fetch package.",
-    "private": false,
     "author": {
         "name": "Jonathan Philipps",
         "url": "https://github.com/jphilipps"

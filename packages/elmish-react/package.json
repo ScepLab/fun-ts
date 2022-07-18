@@ -1,7 +1,6 @@
 {
     "name": "@fun-ts/elmish-react",
     "description": "Implementation of the elm architecture with typescript and a react wrapper.",
-    "private": false,
     "author": {
         "name": "Jonathan Philipps",
         "url": "https://github.com/jphilipps"

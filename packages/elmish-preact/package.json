@@ -1,7 +1,6 @@
 {
     "name": "@fun-ts/elmish-preact",
     "description": "Implementation of the elm architecture with typescript and a preact wrapper.",
-    "private": false,
     "author": {
         "name": "Jonathan Philipps",
         "url": "https://github.com/jphilipps"
@@ -44,7 +43,7 @@
         "fix-eslint": "eslint --fix \"./src/**/*.{ts,tsx}\"",
         "fix-importsort": "import-sort --write ./src/**/*.{ts,tsx}",
         "- Deliver -----------------------------------------": "echo 'unused'",
-        "deliver": "npm publish"
+        "deliver": "npm publish --access=public"
     },
     "dependencies": {
         "@fun-ts/elmish": "^0.3.5",
