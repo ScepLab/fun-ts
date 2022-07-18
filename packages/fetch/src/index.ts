@@ -1,7 +1,6 @@
 export {
     taskifyFetch,
     funFetch,
-    withBadStatus,
     asJson,
     asText,
     asBlob,
@@ -12,5 +11,10 @@ export {
     asBlobTE,
     asFormDataTE,
     asArrayBufferTE,
+    asDecoded,
+    asDecodedTE,
+    withDefaults,
+    withBadStatus,
     withTimeout,
+    withJson,
 } from "./fetch";
