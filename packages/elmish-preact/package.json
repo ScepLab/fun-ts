@@ -13,7 +13,7 @@
         }
     ],
     "license": "MIT",
-    "version": "0.3.4",
+    "version": "0.3.5",
     "module": "./dist/index.js",
     "main": "./dist/index.cjs",
     "types": "./dist/index.d.ts",
@@ -47,7 +47,7 @@
         "deliver": "npm publish"
     },
     "dependencies": {
-        "@fun-ts/elmish": "^0.3.4",
+        "@fun-ts/elmish": "^0.3.5",
         "fp-ts": "^2.12.1"
     },
     "peerDependencies": {

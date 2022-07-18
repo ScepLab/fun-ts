@@ -13,7 +13,7 @@
         }
     ],
     "license": "MIT",
-    "version": "0.3.4",
+    "version": "0.3.5",
     "module": "./dist/index.js",
     "main": "./dist/index.cjs",
     "types": "./dist/index.d.ts",
@@ -25,6 +25,6 @@
         "npm": ">=8.1.4"
     },
     "dependencies": {
-        "@fun-ts/elmish-react": "^0.3.4"
+        "@fun-ts/elmish-react": "^0.3.5"
     }
 }
