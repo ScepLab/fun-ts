@@ -72,14 +72,14 @@
         "fix-fetch": "lerna run fix --stream --scope=@fun-ts/fetch",
         "fix-rest": "lerna run fix --stream --scope=@fun-ts/rest",
         "fix-usage": "lerna run fix --stream --scope=@fun-ts/usage",
-        "- PUBLISH -----------------------------------------": "echo 'unused'",
-        "publish": "lerna run publish --stream",
-        "publish-check": "npm run build && npm run check && npm run test",
-        "publish-elmish": "lerna run publish --stream --scope=@fun-ts/elmish",
-        "publish-elmish-react": "lerna run publish --stream --scope=@fun-ts/elmish-react",
-        "publish-elmish-preact": "lerna run publish --stream --scope=@fun-ts/elmish-preact",
-        "publish-fetch": "lerna run publish --stream --scope=@fun-ts/fetch",
-        "publish-rest": "lerna run publish --stream --scope=@fun-ts/rest"
+        "- Deliver -----------------------------------------": "echo 'unused'",
+        "deliver": "lerna run deliver --stream",
+        "deliver-check": "npm run build && npm run check && npm run test",
+        "deliver-elmish": "lerna run deliver --stream --scope=@fun-ts/elmish",
+        "deliver-elmish-react": "lerna run deliver --stream --scope=@fun-ts/elmish-react",
+        "deliver-elmish-preact": "lerna run deliver --stream --scope=@fun-ts/elmish-preact",
+        "deliver-fetch": "lerna run deliver --stream --scope=@fun-ts/fetch",
+        "deliver-rest": "lerna run deliver --stream --scope=@fun-ts/rest"
     },
     "changelog": {
         "labels": {
