@@ -46,7 +46,7 @@
         "publish": "npm publish"
     },
     "dependencies": {
-        "@fun-ts/elmish": "^0.2.0"
+        "@fun-ts/elmish": "*"
     },
     "peerDependencies": {
         "preact": "^10.7.1"

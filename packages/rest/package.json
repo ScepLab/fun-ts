@@ -47,6 +47,6 @@
         "@types/express-serve-static-core": "^4.17.28"
     },
     "dependencies": {
-        "@fun-ts/fetch": "^0.2.3"
+        "@fun-ts/fetch": "*"
     }
 }
