@@ -23,6 +23,9 @@
         "node": ">=16.14.0",
         "npm": ">=8.1.4"
     },
+    "files": [
+        "/dist"
+    ],
     "scripts": {
         "- TEST --------------------------------------------": "echo 'unused'",
         "test": "npm run -s check-tsc && npm run -s test-rite",
