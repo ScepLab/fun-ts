@@ -1,0 +1,29 @@
+{
+    "name": "@fun-ts/fetch-usage",
+    "description": "Shows examples and the usage of the fetch package.",
+    "author": {
+        "name": "Jonathan Philipps",
+        "url": "https://github.com/jphilipps"
+    },
+    "contributors": [
+        {
+            "name": "Thomas Müller",
+            "url": "https://github.com/tmueller"
+        }
+    ],
+    "license": "MIT",
+    "version": "0.0.0",
+    "module": "./dist/index.js",
+    "main": "./dist/index.cjs",
+    "types": "./dist/index.d.ts",
+    "type": "module",
+    "sideEffects": false,
+    "engineStrict": true,
+    "engines": {
+        "node": ">=16.14.0",
+        "npm": ">=8.1.4"
+    },
+    "dependencies": {
+        "@fun-ts/fetch": "*"
+    }
+}

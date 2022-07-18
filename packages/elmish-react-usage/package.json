@@ -1,6 +1,6 @@
 {
-    "name": "@fun-ts/usage",
-    "description": "Shows examples and the usage each implemented feature and library.",
+    "name": "@fun-ts/elmish-react-usage",
+    "description": "Shows examples and the usage of the elmish-react package.",
     "author": {
         "name": "Jonathan Philipps",
         "url": "https://github.com/jphilipps"
@@ -12,7 +12,7 @@
         }
     ],
     "license": "MIT",
-    "version": "0.2.3",
+    "version": "0.0.0",
     "module": "./dist/index.js",
     "main": "./dist/index.cjs",
     "types": "./dist/index.d.ts",
@@ -24,10 +24,6 @@
         "npm": ">=8.1.4"
     },
     "dependencies": {
-        "@fun-ts/elmish": "^0.2.0",
-        "@fun-ts/elmish-preact": "^0.2.0",
-        "@fun-ts/elmish-react": "^0.2.0",
-        "@fun-ts/fetch": "^0.2.3",
-        "@fun-ts/rest": "^0.2.3"
+        "@fun-ts/elmish-react": "*"
     }
 }
