@@ -2,9 +2,9 @@ import * as Cmd from "./cmd";
 
 import { Cmd as Command, Dispatch } from "./cmd";
 
-export type Init<Model, Msg, Arg = void> = (args: Arg) => UpdateResult<Model, Msg>;
+export type Init<Model, Msg, Arg = void> = (args: Arg) => ElmishResult<Model, Msg>;
 export type Subscribe<Model, Msg> = (model: Model) => Command<Msg>;
-export type Update<Model, Msg> = (model: Model, msg: Msg) => UpdateResult<Model, Msg>;
+export type Update<Model, Msg> = (model: Model, msg: Msg) => ElmishResult<Model, Msg>;
 export type View<Model, Msg, ViewResult> = (dispatch: Dispatch<Msg>, model: Model) => ViewResult;
 export type SetState<Model, Msg> = (dispatch: Dispatch<Msg>, model: Model) => void;
 
@@ -16,7 +16,7 @@ export type Program<Arg, Model, Msg, ViewResult> = {
     setState: SetState<Model, Msg>;
 };
 
-export type UpdateResult<Model, Msg> = [Model, Command<Msg>];
+export type ElmishResult<Model, Msg> = [Model, Command<Msg>];
 
 export const makeProgram = <Arg, Model, Msg, ViewResult>(
     program: Pick<Program<Arg, Model, Msg, ViewResult>, "init" | "update" | "view">
@@ -68,7 +68,7 @@ export const runWith = <Arg>(arg: Arg) =>
             runEffects(update(currentState, msg));
         }
 
-        function runEffects([updatedState, cmd]: UpdateResult<Model, Msg>) {
+        function runEffects([updatedState, cmd]: ElmishResult<Model, Msg>) {
             currentState = updatedState;
 
             cmd.forEach(sub => runAsync(() => sub(dispatch)));
