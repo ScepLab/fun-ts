@@ -9,6 +9,29 @@ import { Decoder as IoTsDecoder, Errors as IoTsErrors } from "io-ts";
 
 import { failure as reportIoTsFailure } from "io-ts/PathReporter";
 
+// ! Why explicit return types everywhere
+// Inferred return types become explicit for generated type definitions.
+// These are based on the current typescript version.
+// So `fetch` parameters in the return type are not pulled from BuiltinFetch at
+// the time they are used, but at the time of compiling this package.
+// Now if typescript types change for parameters of fetch, we have
+// incompatibilities only because of typescript version. This happened for
+// `fetch` when moving from typescript version 4.6 to 4.7.
+
+// ============================================================================
+// Fetch Types
+// ============================================================================
+type BuiltinFetch = typeof fetch;
+
+type FetchError = { readonly type: string; };
+
+type TaskifiedFetchError = ReturnType<typeof networkError | typeof abortError>;
+
+type TaskifiedFetch<L extends FetchError> = FunctionN<
+    Parameters<BuiltinFetch>,
+    TE.TaskEither<L, Response>
+>;
+
 // ============================================================================
 // Fetch
 // ============================================================================
@@ -22,9 +45,9 @@ const abortError = (error: Error) => ({
     error
 });
 
-type BuiltinFetch = typeof fetch;
-
-export const taskifyFetch = (fetchP: BuiltinFetch) => TE.tryCatchK(
+export const taskifyFetch = (
+    fetchP: BuiltinFetch
+): TaskifiedFetch<TaskifiedFetchError> => TE.tryCatchK(
     fetchP,
     flow(
         E.toError,
@@ -34,17 +57,10 @@ export const taskifyFetch = (fetchP: BuiltinFetch) => TE.tryCatchK(
 
 export const funFetch = taskifyFetch(fetch);
 
-type FetchError = { readonly type: string; };
-
-type TaskifiedFetch<L extends FetchError> = FunctionN<
-    Parameters<BuiltinFetch>,
-    TE.TaskEither<L, Response>
->;
-
 // ============================================================================
 // Bad status combinator
 // ============================================================================
-const badStatus = (
+const badStatusError = (
     response: Response
 ) => ({
     type: "BadStatus" as const,
@@ -54,14 +70,16 @@ const badStatus = (
     response,
 });
 
+type BadStatusError = ReturnType<typeof badStatusError>;
+
 export const withBadStatus = <L extends FetchError>(
     funFetch: TaskifiedFetch<L>
-) => flow(
+): TaskifiedFetch<L | BadStatusError> => flow(
     funFetch,
     TE.chainW(
         TE.fromPredicate(
             resp => resp.ok,
-            badStatus
+            badStatusError
         )
     )
 );
@@ -89,6 +107,8 @@ const badPayloadError = (
     response,
     error
 });
+
+type BadPayloadError = ReturnType<ReturnType<typeof badPayloadError>>;
 
 const toBadPayloadError = flow(
     badPayloadError,
@@ -152,11 +172,16 @@ export const asDecodedTE = <A>(dec: IoTsDecoder<unknown, A>) => pipe(
 );
 
 // ============================================================================
-// Json combinator
+// Json combinator - kind of
 // ============================================================================
+type TaskifiedFetchReturningUnknown<L extends FetchError> = FunctionN<
+    Parameters<BuiltinFetch>,
+    TE.TaskEither<L, unknown>
+>;
+
 export const withJson = <L extends FetchError>(
     funFetch: TaskifiedFetch<L>
-) => flow(
+): TaskifiedFetchReturningUnknown<L | BadPayloadError> => flow(
     pipe(
         funFetch,
         withDefaults({ headers: { "Content-Type": "application/json" } })
@@ -171,6 +196,8 @@ const timeoutError = (ms: number) => ({
     type: "Timeout" as const,
     error: new Error(`Timed out after ${ms}ms.`)
 });
+
+type TimeoutError = ReturnType<typeof timeoutError>;
 
 const raceTE = <L, R>(
     te: TE.TaskEither<L, R>
@@ -239,9 +266,9 @@ export const withTimeout = (
     ms: number
 ) => <L extends FetchError>(
     funFetch: TaskifiedFetch<L>
-) => (
-    input: RequestInfo,
-    init: RequestInit = {}
+): TaskifiedFetch<L | TimeoutError> => (
+    input,
+    init = {}
 ) => pipe(
     startTimeout(ms),
     ({ timeoutSignal, clearTimer, abortTask }) => pipe(
