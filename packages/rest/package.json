@@ -53,8 +53,5 @@
     "dependencies": {
         "@fun-ts/fetch": "^0.4.3",
         "fp-ts": "^2.12.1"
-    },
-    "devDependencies": {
-        "type-fest": "^2.12.2"
     }
 }

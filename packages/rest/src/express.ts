@@ -22,7 +22,7 @@ const route = <
 ) => {
     (app[method.toLowerCase()] as core.IRouterMatcher<void>)(
         // FIXME use only string type
-        "" + path, (req, res, next) =>
+        String(path), (req, res, next) =>
         handler(req, res)
             .then(result => {
                 if (!res.headersSent) {
