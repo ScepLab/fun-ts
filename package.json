@@ -1,7 +1,7 @@
 {
     "name": "fun-ts",
     "description": "Monorepo with features like the elmish architecture or a rest client based on functional programming with TypeScript.",
-    "private": false,
+    "version": "0.4.0",
     "author": {
         "name": "Jonathan Philipps",
         "url": "https://github.com/jphilipps"
@@ -60,11 +60,12 @@
         "test-rest": "lerna run test --stream --scope=@fun-ts/rest",
         "test-usage": "lerna run test --stream --scope=@fun-ts/usage",
         "- CHECK -------------------------------------------": "echo 'unused'",
-        "check": "lerna run check --stream",
+        "check": "npm run check-package-json && lerna run check --stream",
         "check-elmish": "lerna run check --stream --scope=@fun-ts/elmish",
         "check-fetch": "lerna run check --stream --scope=@fun-ts/fetch",
         "check-rest": "lerna run check --stream --scope=@fun-ts/rest",
         "check-usage": "lerna run check --stream --scope=@fun-ts/usage",
+        "check-package-json": "npmPkgJsonLint .",
         "- FIX ---------------------------------------------": "echo 'unused'",
         "fix": "lerna run fix --stream",
         "fix-elmish": "lerna run fix --stream --scope=@fun-ts/elmish",
@@ -96,6 +97,8 @@
         "tslib": "2.3.1"
     },
     "devDependencies": {
+        "npm-package-json-lint-config-default": "5.0.0",
+        "npm-package-json-lint": "6.3.0",
         "env-cmd": "10.1.0",
         "lerna-changelog": "2.2.0",
         "npm-run-all": "4.1.5",

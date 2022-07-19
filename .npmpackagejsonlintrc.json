@@ -1,0 +1,7 @@
+{
+    "$schema": "https://json.schemastore.org/npmpackagejsonlintrc",
+    "extends": "npm-package-json-lint-config-default",
+    "rules": {
+        "require-repository": "error"
+    }
+}
