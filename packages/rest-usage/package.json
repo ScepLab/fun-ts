@@ -11,6 +11,10 @@
             "url": "https://github.com/tmueller"
         }
     ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/jphilipps/fun-ts.git"
+    },
     "license": "MIT",
     "version": "0.4.0",
     "sideEffects": false,
