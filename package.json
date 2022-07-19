@@ -1,7 +1,6 @@
 {
     "name": "fun-ts",
     "description": "Monorepo with features like the elmish architecture or a rest client based on functional programming with TypeScript.",
-    "version": "0.4.0",
     "author": {
         "name": "Jonathan Philipps",
         "url": "https://github.com/jphilipps"
