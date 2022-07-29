@@ -47,11 +47,11 @@
         "fix-eslint": "eslint --fix \"./src/**/*.{ts,tsx}\"",
         "fix-importsort": "import-sort --write ./src/**/*.{ts,tsx}"
     },
-    "peerDependencies": {
-        "@types/express-serve-static-core": "^4.17.28"
-    },
     "dependencies": {
         "@fun-ts/fetch": "^0.4.4",
         "fp-ts": "^2.12.1"
+    },
+    "devDependencies": {
+        "@types/express-serve-static-core": "^4.17.28"
     }
 }

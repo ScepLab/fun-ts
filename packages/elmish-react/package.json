@@ -51,16 +51,12 @@
     },
     "dependencies": {
         "@fun-ts/elmish": "^0.4.4",
-        "fp-ts": "^2.12.1"
-    },
-    "peerDependencies": {
+        "fp-ts": "^2.12.1",
         "react": "^18.0.0",
         "react-dom": "^18.0.0"
     },
     "devDependencies": {
         "@types/react": "^18.0.0",
-        "@types/react-dom": "^18.0.0",
-        "react": "^18.0.0",
-        "react-dom": "^18.0.0"
+        "@types/react-dom": "^18.0.0"
     }
 }
