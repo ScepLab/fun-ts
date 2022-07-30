@@ -2,7 +2,9 @@
     "extends": "../../tsconfig.json",
     "compilerOptions": {
         "rootDir": "./src",
-        "allowSyntheticDefaultImports": true
+        "outDir": "./dist",
+        "allowSyntheticDefaultImports": true,
+        "jsx": "react-jsx",
     },
     "include": [
         "./src"
