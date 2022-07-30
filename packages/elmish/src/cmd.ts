@@ -12,11 +12,11 @@ export type Cmd<A> = ReadonlyArray<Subscription<A>>;
 
 export const none = [] as const;
 
-export const ofMsg = <Msg extends unknown>(msg: Msg): [Subscription<Msg>] => [
+export const ofMsg = <Msg extends unknown>(msg: Msg): Cmd<Msg> => [
     (dispatch: Dispatch<Msg>) => { dispatch(msg); }
 ];
 
-export const ofSub = <Msg extends unknown>(sub: Subscription<Msg>): [Subscription<Msg>] => [
+export const ofSub = <Msg extends unknown>(sub: Subscription<Msg>): Cmd<Msg> => [
     sub
 ];
 

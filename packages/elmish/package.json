@@ -51,5 +51,11 @@
     },
     "dependencies": {
         "fp-ts": "^2.12.1"
+    },
+    "peerDependencies": {
+        "history": "^5.0.0"
+    },
+    "devDependencies": {
+        "history": "^5.0.0"
     }
 }
