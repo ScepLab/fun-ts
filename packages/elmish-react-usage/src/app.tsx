@@ -1,8 +1,12 @@
 import { ADTType, makeADT, ofType } from "@morphic-ts/adt";
 import { ElmishResult, Init, Update, cmd } from "@fun-ts/elmish";
+import { Route, HashRouter as Router, Routes } from "react-router-dom";
 
+import { FirstPage } from "./pages/first-page";
+import { HomePage } from "./pages/home-page";
 import React from "react";
 import { ReactView } from "@fun-ts/elmish-react";
+import { SecondPage } from "./pages/second-page";
 import { pipe } from "fp-ts/function";
 
 // ============================================================================
@@ -49,9 +53,16 @@ export const update: Update<Model, Msg> = (model, msg): UR => pipe(
 export const view: ReactView<Model, Msg> = (_dispatch, _model) => {
     return (
         <React.StrictMode>
-            <div>
-                <h1>example</h1>
-            </div>
+            <Router>
+                <Routes>
+                    <Route path="/">
+                        <Route index element={<HomePage />} />
+                        <Route path="first-page" element={<FirstPage />} />
+                        <Route path="second-page" element={<SecondPage />} />
+                        <Route path="*" element={<HomePage />} />
+                    </Route>
+                </Routes>
+            </Router>
         </React.StrictMode>
     );
 };
