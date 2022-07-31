@@ -46,22 +46,25 @@ export const withSetState = <Model, Msg>(setState: SetState<Model, Msg>) =>
         setState
     });
 
+// Does not work type wise
+// especially <ViewResult> is not working, TViewResult results in unknown
+//
 // Map the program type
-export const map = <Arg, Model, Msg, TModel, TMsg, TArg, TViewResult>(
-    mapInit: (init: Init<Model, Msg, Arg>) => Init<TModel, TMsg, TArg>,
-    mapUpdate: (update: Update<Model, Msg>) => Update<TModel, TMsg>,
-    mapView: <ViewResult>(view: View<Model, Msg, ViewResult>) => View<TModel, TMsg, TViewResult>,
-    mapSetState: (setState: SetState<Model, Msg>) => SetState<TModel, TMsg>,
-    mapSubscribe: (subscribe: Subscribe<Model, Msg>) => Subscribe<TModel, TMsg>,
-) => <ViewResult>(
-    program: Program<Arg, Model, Msg, ViewResult>
-): Program<TArg, TModel, TMsg, TViewResult> => ({
-    init: mapInit(program.init),
-    update: mapUpdate(program.update),
-    view: mapView(program.view),
-    setState: mapSetState(program.setState),
-    subscribe: mapSubscribe(program.subscribe),
-});
+// export const map = <Arg, Model, Msg, TModel, TMsg, TArg, TViewResult>(
+//     mapInit: (init: Init<Model, Msg, Arg>) => Init<TModel, TMsg, TArg>,
+//     mapUpdate: (update: Update<Model, Msg>) => Update<TModel, TMsg>,
+//     mapView: <ViewResult>(view: View<Model, Msg, ViewResult>) => View<TModel, TMsg, TViewResult>,
+//     mapSetState: (setState: SetState<Model, Msg>) => SetState<TModel, TMsg>,
+//     mapSubscribe: (subscribe: Subscribe<Model, Msg>) => Subscribe<TModel, TMsg>,
+// ) => <ViewResult>(
+//     program: Program<Arg, Model, Msg, ViewResult>
+// ): Program<TArg, TModel, TMsg, TViewResult> => ({
+//     init: mapInit(program.init),
+//     update: mapUpdate(program.update),
+//     view: mapView(program.view),
+//     setState: mapSetState(program.setState),
+//     subscribe: mapSubscribe(program.subscribe),
+// });
 
 const runAsync: (cb: VoidFunction) => void =
     typeof queueMicrotask === "undefined" ?
