@@ -97,4 +97,4 @@ export const runWith = <Arg>(arg: Arg) =>
         }
     };
 
-export const run = runWith(undefined);
+export const run = runWith({});
