@@ -1,13 +1,14 @@
 import { ADTType, makeADT, ofType } from "@morphic-ts/adt";
 import { ElmishResult, InitWithLocation, Location, LocationToMessage, Update, cmd } from "@fun-ts/elmish";
 import { Route, unstable_HistoryRouter as Router, Routes, } from "react-router-dom";
+import { history, push } from "./navigation";
 
 import { FirstPage } from "./pages/first-page";
 import { HomePage } from "./pages/home-page";
+import { NavigationContainer } from "./components/navigation-container";
 import React from "react";
 import { ReactView } from "@fun-ts/elmish-react";
 import { SecondPage } from "./pages/second-page";
-import { history } from "./navigation";
 import { pipe } from "fp-ts/function";
 
 // ============================================================================
@@ -34,10 +35,12 @@ export const init: InitWithLocation<Model, Msg, { location: Location; }> = ({
 // ============================================================================
 type TestMsg = { type: "Test"; };
 type UrlChangedMsg = { type: "UrlChanged", location: Location; };
+type NavigationRequestedMsg = { type: "NavigationRequested", url: string; };
 
 const MsgAdt = makeADT("type")({
     Test: ofType<TestMsg>(),
     UrlChanged: ofType<UrlChangedMsg>(),
+    NavigationRequested: ofType<NavigationRequestedMsg>()
 });
 export type Msg = ADTType<typeof MsgAdt>;
 
@@ -68,6 +71,13 @@ export const update: Update<Model, Msg> = (model, msg): UR => pipe(
                 currentLocation: msg.location
             },
             cmd.none
+        ],
+
+        NavigationRequested: (msg): UR => [
+            {
+                ...model,
+            },
+            push(msg.url)
         ]
     }),
 );
@@ -75,10 +85,14 @@ export const update: Update<Model, Msg> = (model, msg): UR => pipe(
 // ============================================================================
 // View
 // ============================================================================
-export const view: ReactView<Model, Msg> = (_dispatch, model) => {
+export const view: ReactView<Model, Msg> = (dispatch, model) => {
     return (
         <React.StrictMode>
+
             <Router history={history}>
+                <NavigationContainer onNavigate={(url) => {
+                    dispatch(MsgAdt.as.NavigationRequested({ url }));
+                }} />
                 <Routes>
                     <Route path="/">
                         <Route index element={<HomePage />} />
