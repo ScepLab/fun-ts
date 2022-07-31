@@ -113,7 +113,7 @@
         "import-sort-parser-typescript": "6.0.0",
         "import-sort-style-react2": "0.3.6",
         "esbuild-node-externals": "1.4.1",
-        "type-fest": "2.17.0",
+        "type-fest": "2.18.0",
         "@tsconfig/strictest": "1.0.1",
         "husky": "8.0.1",
         "riteway": "6.3.1",
