@@ -85,24 +85,21 @@ export const update: Update<Model, Msg> = (model, msg): UR => pipe(
 // ============================================================================
 // View
 // ============================================================================
-export const view: ReactView<Model, Msg> = (dispatch, model) => {
-    return (
-        <React.StrictMode>
-
-            <Router history={history}>
-                <NavigationContainer onNavigate={(url) => {
-                    dispatch(MsgAdt.as.NavigationRequested({ url }));
-                }} />
-                <Routes>
-                    <Route path="/">
-                        <Route index element={<HomePage />} />
-                        <Route path="first-page" element={<FirstPage />} />
-                        <Route path="second-page" element={<SecondPage />} />
-                        <Route path="*" element={<HomePage />} />
-                    </Route>
-                </Routes>
-            </Router>
-            <pre>{JSON.stringify(model.currentLocation, null, 4)}</pre>
-        </React.StrictMode>
-    );
-};
+export const view: ReactView<Model, Msg> = (dispatch, model) => (
+    <React.StrictMode>
+        <Router history={history}>
+            <NavigationContainer onNavigate={(url) => {
+                dispatch(MsgAdt.as.NavigationRequested({ url }));
+            }} />
+            <Routes>
+                <Route path="/">
+                    <Route index element={<HomePage />} />
+                    <Route path="first-page" element={<FirstPage />} />
+                    <Route path="second-page" element={<SecondPage />} />
+                    <Route path="*" element={<HomePage />} />
+                </Route>
+            </Routes>
+        </Router>
+        <pre>{JSON.stringify(model.currentLocation, null, 4)}</pre>
+    </React.StrictMode>
+);
