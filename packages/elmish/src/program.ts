@@ -2,7 +2,7 @@ import * as Cmd from "./cmd";
 
 import { Cmd as Command, Dispatch } from "./cmd";
 
-export type Init<Model, Msg, Arg = void> = (args: Arg) => ElmishResult<Model, Msg>;
+export type Init<Model, Msg, Arg = {}> = (args: Arg) => ElmishResult<Model, Msg>;
 export type Subscribe<Model, Msg> = (model: Model) => Command<Msg>;
 export type Update<Model, Msg> = (model: Model, msg: Msg) => ElmishResult<Model, Msg>;
 export type View<Model, Msg, ViewResult> = (dispatch: Dispatch<Msg>, model: Model) => ViewResult;
