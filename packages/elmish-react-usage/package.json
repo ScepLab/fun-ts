@@ -16,7 +16,7 @@
         "url": "https://github.com/jphilipps/fun-ts.git"
     },
     "license": "MIT",
-    "version": "0.6.1",
+    "version": "0.6.2",
     "main": "index.js",
     "types": "./dist/index.d.ts",
     "sideEffects": false,
@@ -34,7 +34,7 @@
         "clean-build": "npx rimraf ./dist-test && npx rimraf ./dist && npx rimraf ./storybook-static"
     },
     "dependencies": {
-        "@fun-ts/elmish-react": "^0.6.1",
+        "@fun-ts/elmish-react": "^0.6.2",
         "react": "18.2.0",
         "react-dom": "18.2.0",
         "react-router-dom": "6.3.0",
