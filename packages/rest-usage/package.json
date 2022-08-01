@@ -16,7 +16,7 @@
         "url": "https://github.com/jphilipps/fun-ts.git"
     },
     "license": "MIT",
-    "version": "0.6.2",
+    "version": "0.6.3",
     "sideEffects": false,
     "engineStrict": true,
     "engines": {
@@ -36,7 +36,7 @@
         "fix-importsort": "import-sort --write ./src/**/*.{ts,tsx}"
     },
     "dependencies": {
-        "@fun-ts/rest": "^0.6.2",
+        "@fun-ts/rest": "^0.6.3",
         "express": "4.18.1"
     },
     "devDependencies": {
