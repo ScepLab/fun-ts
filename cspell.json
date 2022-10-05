@@ -8,6 +8,7 @@
         "elmishify",
         "eqeqeq",
         "esbuild",
+        "ffetch",
         "Howto",
         "hyrious",
         "importsort",
@@ -19,6 +20,7 @@
         "preact",
         "preminor",
         "prepatch",
+        "Restyped",
         "riteway",
         "Taskified",
         "taskify"
