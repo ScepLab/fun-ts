@@ -51,6 +51,7 @@
         "build-elmish-react": "lerna run build --stream --scope=@fun-ts/elmish-react",
         "build-elmish-preact": "lerna run build --stream --scope=@fun-ts/elmish-preact",
         "build-fetch": "lerna run build --stream --scope=@fun-ts/fetch",
+        "build-rest-client": "lerna run build --stream --scope=@fun-ts/rest-client",
         "build-rest": "lerna run build --stream --scope=@fun-ts/rest",
         "build-usage": "lerna run build --stream --scope=@fun-ts/usage",
         "- TEST --------------------------------------------": "echo 'unused'",
@@ -62,10 +63,12 @@
         "test-rest": "lerna run test --stream --scope=@fun-ts/rest",
         "test-usage": "lerna run test --stream --scope=@fun-ts/usage",
         "- CHECK -------------------------------------------": "echo 'unused'",
+        "check-build": "npm run build && npm run test && npm run check",
         "check": "npm run check-package-json && lerna run check --stream",
         "check-elmish": "lerna run check --stream --scope=@fun-ts/elmish",
         "check-fetch": "lerna run check --stream --scope=@fun-ts/fetch",
         "check-rest": "lerna run check --stream --scope=@fun-ts/rest",
+        "check-rest-client": "lerna run check --stream --scope=@fun-ts/rest-client",
         "check-usage": "lerna run check --stream --scope=@fun-ts/usage",
         "check-package-json": "npmPkgJsonLint .",
         "- FIX ---------------------------------------------": "echo 'unused'",
@@ -75,6 +78,7 @@
         "fix-elmish-preact": "lerna run fix --stream --scope=@fun-ts/elmish-preact",
         "fix-fetch": "lerna run fix --stream --scope=@fun-ts/fetch",
         "fix-rest": "lerna run fix --stream --scope=@fun-ts/rest",
+        "fix-rest-client": "lerna run fix --stream --scope=@fun-ts/rest-client",
         "fix-usage": "lerna run fix --stream --scope=@fun-ts/usage",
         "- Deliver -----------------------------------------": "echo 'unused'",
         "deliver": "lerna run deliver --stream",
@@ -83,7 +87,8 @@
         "deliver-elmish-react": "lerna run deliver --stream --scope=@fun-ts/elmish-react",
         "deliver-elmish-preact": "lerna run deliver --stream --scope=@fun-ts/elmish-preact",
         "deliver-fetch": "lerna run deliver --stream --scope=@fun-ts/fetch",
-        "deliver-rest": "lerna run deliver --stream --scope=@fun-ts/rest"
+        "deliver-rest": "lerna run deliver --stream --scope=@fun-ts/rest",
+        "deliver-rest-client": "lerna run deliver --stream --scope=@fun-ts/rest-client"
     },
     "changelog": {
         "labels": {
