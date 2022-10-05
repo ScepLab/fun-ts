@@ -16,7 +16,7 @@
         "url": "https://github.com/jphilipps/fun-ts.git"
     },
     "license": "MIT",
-    "version": "0.6.3",
+    "version": "0.7.0",
     "module": "./dist/index.js",
     "main": "./dist/index.cjs",
     "types": "./dist/index.d.ts",
@@ -50,7 +50,7 @@
         "deliver": "npm publish --access=public"
     },
     "dependencies": {
-        "@fun-ts/elmish": "^0.6.3",
+        "@fun-ts/elmish": "^0.7.0",
         "fp-ts": "^2.12.1",
         "preact": "^10.7.1"
     }
