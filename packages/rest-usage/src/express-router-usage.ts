@@ -1,6 +1,6 @@
 import { Comment, RestApiExample } from "./rest-definition";
 
-import { createTypedRouter } from "@fun-ts/rest/src/express";
+import { createTypedRouter } from "@fun-ts/rest";
 import express from "express";
 import { faker } from "@faker-js/faker";
 
