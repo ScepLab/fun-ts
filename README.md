@@ -50,7 +50,6 @@
     </a>
 </p>
 
-
 <p align="center">
     @fun-ts/fetch
 </p>
@@ -128,6 +127,22 @@
       <img 
         alt="npm downloads" 
         src="https://img.shields.io/npm/dm/@fun-ts/rest-client.svg?maxAge=43200">
+    </a>
+</p>
+
+<p align="center">
+    @fun-ts/rest
+</p>
+<p align="center">
+    <a href="https://www.npmjs.com/package/@fun-ts/rest">
+      <img 
+        alt="npm version" 
+        src="https://img.shields.io/npm/v/@fun-ts/rest">
+    </a>
+    <a href="https://www.npmjs.com/package/@fun-ts/rest">
+      <img 
+        alt="npm downloads" 
+        src="https://img.shields.io/npm/dm/@fun-ts/rest.svg?maxAge=43200">
     </a>
 </p>
 
