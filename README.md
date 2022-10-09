@@ -84,6 +84,22 @@
 </p>
 
 <p align="center">
+    @fun-ts/elmish-react-legacy
+</p>
+<p align="center">
+    <a href="https://www.npmjs.com/package/@fun-ts/elmish-react-legacy">
+      <img 
+        alt="npm version" 
+        src="https://img.shields.io/npm/v/@fun-ts/elmish-react-legacy">
+    </a>
+    <a href="https://www.npmjs.com/package/@fun-ts/elmish-react-legacy">
+      <img 
+        alt="npm downloads" 
+        src="https://img.shields.io/npm/dm/@fun-ts/elmish-react-legacy.svg?maxAge=43200">
+    </a>
+</p>
+
+<p align="center">
     @fun-ts/remote-result-adt
 </p>
 <p align="center">
@@ -96,6 +112,22 @@
       <img 
         alt="npm downloads" 
         src="https://img.shields.io/npm/dm/@fun-ts/remote-result-adt.svg?maxAge=43200">
+    </a>
+</p>
+
+<p align="center">
+    @fun-ts/rest-client
+</p>
+<p align="center">
+    <a href="https://www.npmjs.com/package/@fun-ts/rest-client">
+      <img 
+        alt="npm version" 
+        src="https://img.shields.io/npm/v/@fun-ts/rest-client">
+    </a>
+    <a href="https://www.npmjs.com/package/@fun-ts/rest-client">
+      <img 
+        alt="npm downloads" 
+        src="https://img.shields.io/npm/dm/@fun-ts/rest-client.svg?maxAge=43200">
     </a>
 </p>
 
