@@ -37,8 +37,7 @@
         "@fun-ts/elmish-react": "^0.7.0",
         "react": "18.2.0",
         "react-dom": "18.2.0",
-        "react-router-dom": "6.3.0",
-        "type-fest": "2.18.0"
+        "react-router-dom": "6.3.0"
     },
     "devDependencies": {
         "@types/react": "18.0.15",
