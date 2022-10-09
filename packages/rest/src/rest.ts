@@ -81,7 +81,7 @@ export type TypedRequest<
     TPath extends RestPath<Rest> = RestPath<Rest>,
     TMethod extends RestMethod<Rest> = RestMethod<Rest>,
     TParams extends RestParams = Rest[TPath][TMethod],
-    > =
+> =
     & { url: string; }
     &
     (unknown extends TParams["body"] ?
@@ -137,7 +137,7 @@ export interface JsonResponse<
     TPath extends RestPath<TRest>,
     TMethod extends RestMethod<TRest>,
     TParams extends RestParams = TRest[TPath][TMethod],
-    > extends Response {
+> extends Response {
     json(): Promise<TParams["response"]>;
 }
 

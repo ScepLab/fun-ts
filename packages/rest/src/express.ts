@@ -33,7 +33,7 @@ const route = <
     );
 };
 
-export const createMethod = <TRestDc extends RestBase>(
+const createMethod = <TRestDc extends RestBase>(
     method: HttpMethod,
     app:
         | core.Express
