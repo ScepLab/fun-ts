@@ -16,7 +16,7 @@
         "url": "https://github.com/jphilipps/fun-ts.git"
     },
     "license": "MIT",
-    "version": "0.7.0",
+    "version": "0.7.1",
     "module": "./dist/index.js",
     "main": "./dist/index.cjs",
     "types": "./dist/index.d.ts",
