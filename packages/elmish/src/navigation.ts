@@ -28,10 +28,9 @@ export type InitWithLocation<
     Model,
     Msg,
     Arg extends InitArgWithLocation = InitArgWithLocation
-    > = (args: Arg) => ElmishResult<Model, Msg>;
+> = (args: Arg) => ElmishResult<Model, Msg>;
 
 export namespace program {
-
     export const withNavigation = <Msg>(
         locationToMessage: (location: Location) => Msg,
         history: H.History,
@@ -61,5 +60,4 @@ export namespace program {
             }),
         ),
     });
-
 }

@@ -16,11 +16,13 @@ export const ofMsg = <Msg extends unknown>(msg: Msg): Cmd<Msg> => [
     (dispatch: Dispatch<Msg>) => { dispatch(msg); }
 ];
 
-export const ofSub = <Msg extends unknown>(sub: Subscription<Msg>): Cmd<Msg> => [
-    sub
-];
+export const ofSub = <Msg extends unknown>(
+    sub: Subscription<Msg>
+): Cmd<Msg> => [sub];
 
-export const batch = <Msg extends unknown>(...cmds: Cmd<Msg>[]): Cmd<Msg> => pipe(
+export const batch = <Msg extends unknown>(
+    ...cmds: Cmd<Msg>[]
+): Cmd<Msg> => pipe(
     cmds,
     ROA.flatten
 );

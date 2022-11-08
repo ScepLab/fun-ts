@@ -4,13 +4,11 @@ import { Init, Program, Update } from "./program";
 const augment = <Args extends unknown[], TReturn>(
     pre: (...a: Args) => void,
     post: (a: TReturn) => void,
-) => (f: FunctionN<Args, TReturn>) => {
-    return (...args: Args) => {
-        pre(...args);
-        const res = f(...args);
-        post(res);
-        return res;
-    };
+) => (f: FunctionN<Args, TReturn>) => (...args: Args) => {
+    pre(...args);
+    const res = f(...args);
+    post(res);
+    return res;
 };
 
 const augmentUpdate = <Model, Msg>(
