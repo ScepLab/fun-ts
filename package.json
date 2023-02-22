@@ -14,10 +14,10 @@
     "license": "MIT",
     "repository": {
         "type": "git",
-        "url": "https://github.com/jphilipps/fun-ts.git"
+        "url": "https://github.com/ScepLab/fun-ts"
     },
     "bugs": {
-        "url": "https://github.com/jphilipps/fun-ts/issues"
+        "url": "https://github.com/ScepLab/fun-ts/issues"
     },
     "engineStrict": true,
     "engines": {
