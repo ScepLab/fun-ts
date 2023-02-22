@@ -53,9 +53,10 @@
         "fp-ts": "^2.12.1"
     },
     "peerDependencies": {
-        "history": "^5.0.0"
+        "history": "^4.10.1"
     },
     "devDependencies": {
-        "history": "^5.0.0"
+        "history": "^4.10.1",
+        "@types/history": "^4.7.11"
     }
 }
