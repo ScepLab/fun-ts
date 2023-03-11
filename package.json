@@ -21,8 +21,8 @@
     },
     "engineStrict": true,
     "engines": {
-        "node": ">=16.14.0",
-        "npm": ">=8.1.4"
+        "node": ">=18.15.0",
+        "npm": ">=9.5.0"
     },
     "keywords": [
         "fun",

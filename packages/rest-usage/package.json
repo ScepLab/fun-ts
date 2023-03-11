@@ -18,11 +18,6 @@
     "license": "MIT",
     "version": "0.7.2",
     "sideEffects": false,
-    "engineStrict": true,
-    "engines": {
-        "node": ">=16.14.0",
-        "npm": ">=8.1.4"
-    },
     "scripts": {
         "- CHECK -------------------------------------------": "echo 'unused'",
         "check": "npm run -s check-eslint && npm run -s check-cspell && npm run -s check-tsc && npm run -s check-importsort",

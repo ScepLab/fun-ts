@@ -20,11 +20,6 @@
     "main": "index.js",
     "types": "./dist/index.d.ts",
     "sideEffects": false,
-    "engineStrict": true,
-    "engines": {
-        "node": ">=16.14.0",
-        "npm": ">=8.1.4"
-    },
     "scripts": {
         "dev": "vite",
         "build": "tsc && vite build",

@@ -22,11 +22,6 @@
     "types": "./dist/index.d.ts",
     "type": "module",
     "sideEffects": false,
-    "engineStrict": true,
-    "engines": {
-        "node": ">=16.14.0",
-        "npm": ">=8.1.4"
-    },
     "dependencies": {
         "@fun-ts/fetch": "^0.7.2"
     }
