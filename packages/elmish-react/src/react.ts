@@ -9,7 +9,9 @@ export type ReactView<Model, Msg> = View<Model, Msg, ReactElement>;
 export const withReactSynchronous = (parent: HTMLElement) => {
     const root = createRoot(parent);
 
-    return <Arg, Model, Msg>(prog: Program<Arg, Model, Msg, ReactElement>) => pipe(
+    return <Arg, Model, Msg>(
+        prog: Program<Arg, Model, Msg, ReactElement>
+    ) => pipe(
         prog,
         program.withSetState<Model, Msg>((dispatch, model) => {
             root.render(prog.view(dispatch, model));

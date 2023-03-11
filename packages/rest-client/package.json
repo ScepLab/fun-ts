@@ -44,16 +44,15 @@
         "- Deliver -----------------------------------------": "echo 'unused'",
         "deliver": "npm publish --access=public"
     },
-    "dependencies": {
+    "peerDependencies": {
         "@fun-ts/fetch": "^0.7.2",
         "@morphic-ts/adt": "^3.0.0",
-        "fp-ts": "^2.12.1"
-    },
-    "peerDependencies": {
-        "io-ts": "^2.2.16"
+        "io-ts": "^2.2.20"
     },
     "devDependencies": {
-        "cross-fetch": "^3.1.5",
-        "io-ts": "^2.2.16"
+        "@fun-ts/fetch": "0.7.2",
+        "@morphic-ts/adt": "3.0.0",
+        "cross-fetch": "3.1.5",
+        "io-ts": "2.2.20"
     }
 }

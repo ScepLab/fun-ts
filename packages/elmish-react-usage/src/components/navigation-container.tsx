@@ -14,8 +14,14 @@ export const NavigationContainer: FC<NavigationContainerProps> = ({
             <Link to="/second-page">Second Page</Link>
         </nav>
         <nav style={{ display: "flex", gap: "10px" }}>
-            <button onClick={() => onNavigate("/home")}>PUSH Home</button>
-            <button onClick={() => onNavigate("/first-page")}>PUSH First Page</button>
-            <button onClick={() => onNavigate("/second-page")}>PUSH Second Page</button>
+            <button onClick={() => onNavigate("/home")}>
+                {"PUSH Home"}
+            </button>
+            <button onClick={() => onNavigate("/first-page")}>
+                {"PUSH First Page"}
+            </button>
+            <button onClick={() => onNavigate("/second-page")}>
+                {"PUSH Second Page"}
+            </button>
         </nav>
     </>;

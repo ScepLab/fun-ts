@@ -16,9 +16,15 @@ const augmentUpdate = <Model, Msg>(
 ): Update<Model, Msg> => pipe(
     update,
     augment(
-        (model, msg) => console.debug("Before Update", { model, msg }),
-        ([model, commands]) => console.debug("After Update", { model, commands })
-    )
+        (model, msg) => console.debug(
+            "Before Update",
+            { model, msg }
+        ),
+        ([model, commands]) => console.debug(
+            "After Update",
+            { model, commands }
+        )
+    ),
 );
 
 const augmentInit = <Model, Msg, Args>(
@@ -28,7 +34,7 @@ const augmentInit = <Model, Msg, Args>(
     augment(
         (arg) => console.debug("Init with", { arg }),
         ([model, commands]) => console.debug("After Init", { model, commands })
-    )
+    ),
 );
 
 export const withConsoleDebug = <Arg, Model, Msg, View>(

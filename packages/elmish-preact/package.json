@@ -45,8 +45,13 @@
         "deliver": "npm publish --access=public"
     },
     "dependencies": {
-        "@fun-ts/elmish": "^0.7.2",
-        "fp-ts": "^2.12.1",
         "preact": "^10.7.1"
+    },
+    "peerDependencies": {
+        "fp-ts": "^2.13.1",
+        "@fun-ts/elmish": "^0.7.2"
+    },
+    "devDependencies": {
+        "@fun-ts/elmish": "0.7.2"
     }
 }

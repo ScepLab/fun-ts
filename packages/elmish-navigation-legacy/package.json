@@ -49,11 +49,10 @@
     },
     "peerDependencies": {
         "fp-ts": "^2.13.1",
-        "@fun-ts/elmish": "*"
+        "@fun-ts/elmish": "0.7.2"
     },
     "devDependencies": {
-        "@types/history": "^4.7.11",
-        "fp-ts": "^2.13.1",
-        "@fun-ts/elmish": "*"
+        "@fun-ts/elmish": "0.7.2",
+        "@types/history": "4.7.11"
     }
 }

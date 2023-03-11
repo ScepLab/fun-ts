@@ -44,11 +44,12 @@
         "- Deliver -----------------------------------------": "echo 'unused'",
         "deliver": "npm publish --access=public"
     },
-    "dependencies": {
+    "peerDependencies": {
         "@fun-ts/fetch": "^0.7.2",
-        "fp-ts": "^2.12.1"
+        "fp-ts": "^2.13.1"
     },
     "devDependencies": {
-        "@types/express-serve-static-core": "^4.17.28"
+        "@fun-ts/fetch": "0.7.2",
+        "@types/express-serve-static-core": "4.17.28"
     }
 }

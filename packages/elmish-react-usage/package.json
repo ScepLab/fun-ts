@@ -29,6 +29,7 @@
         "clean-build": "npx rimraf ./dist-test && npx rimraf ./dist && npx rimraf ./storybook-static"
     },
     "dependencies": {
+        "@fun-ts/elmish": "0.7.2",
         "@fun-ts/elmish-react": "^0.7.2",
         "@fun-ts/elmish-navigation": "^0.7.2",
         "react": "18.2.0",

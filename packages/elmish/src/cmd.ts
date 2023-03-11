@@ -24,7 +24,7 @@ export const batch = <Msg extends unknown>(
     ...cmds: Cmd<Msg>[]
 ): Cmd<Msg> => pipe(
     cmds,
-    ROA.flatten
+    ROA.flatten,
 );
 
 export const map = <MsgA, MsgB>(map: FunctionN<[msg: MsgA], MsgB>) =>

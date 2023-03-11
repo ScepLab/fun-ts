@@ -45,13 +45,16 @@
         "deliver": "npm publish --access=public"
     },
     "dependencies": {
-        "@fun-ts/elmish": "^0.7.2",
-        "fp-ts": "^2.12.1",
         "react": "^18.0.0",
         "react-dom": "^18.0.0"
     },
+    "peerDependencies": {
+        "fp-ts": "^2.13.1",
+        "@fun-ts/elmish": "^0.7.2"
+    },
     "devDependencies": {
-        "@types/react": "^18.0.0",
-        "@types/react-dom": "^18.0.0"
+        "@types/react": "18.0.0",
+        "@types/react-dom": "18.0.0",
+        "@fun-ts/elmish": "0.7.2"
     }
 }

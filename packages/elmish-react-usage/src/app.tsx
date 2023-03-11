@@ -92,6 +92,7 @@ export const view: ReactView<Model, Msg> = (dispatch, model) => (
             <NavigationContainer onNavigate={(url) => {
                 dispatch(MsgAdt.as.NavigationRequested({ url }));
             }} />
+
             <Routes>
                 <Route path="/">
                     <Route index element={<HomePage />} />
@@ -101,6 +102,8 @@ export const view: ReactView<Model, Msg> = (dispatch, model) => (
                 </Route>
             </Routes>
         </Router>
-        <pre>{JSON.stringify(model.currentLocation, null, 4)}</pre>
+        <pre>
+            {JSON.stringify(model.currentLocation, null, 4)}
+        </pre>
     </React.StrictMode>
 );

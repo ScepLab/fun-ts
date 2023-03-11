@@ -9,15 +9,18 @@ export type Init<Model, Msg, Arg = {}> = (
 export type Subscribe<Model, Msg> = (model: Model) => Command<Msg>;
 
 export type Update<Model, Msg> = (
-    model: Model, msg: Msg
+    model: Model,
+    msg: Msg
 ) => ElmishResult<Model, Msg>;
 
 export type View<Model, Msg, ViewResult> = (
-    dispatch: Dispatch<Msg>, model: Model
+    dispatch: Dispatch<Msg>,
+    model: Model
 ) => ViewResult;
 
 export type SetState<Model, Msg> = (
-    dispatch: Dispatch<Msg>, model: Model
+    dispatch: Dispatch<Msg>,
+    model: Model
 ) => void;
 
 export type Program<Arg, Model, Msg, ViewResult> = {
