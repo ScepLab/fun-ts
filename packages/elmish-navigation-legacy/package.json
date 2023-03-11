@@ -1,6 +1,6 @@
 {
-    "name": "@fun-ts/elmish",
-    "description": "Implementation of the elm architecture with typescript.",
+    "name": "@fun-ts/elmish-navigation-legacy",
+    "description": "Implementation the navigation of the elm architecture with typescript for apps which are using the history dependency below version 5.",
     "author": {
         "name": "Jonathan Philipps",
         "url": "https://github.com/jphilipps"
@@ -44,10 +44,16 @@
         "- Deliver -----------------------------------------": "echo 'unused'",
         "deliver": "npm publish --access=public"
     },
+    "dependencies": {
+        "history": "^4.10.1"
+    },
     "peerDependencies": {
-        "fp-ts": "^2.13.1"
+        "fp-ts": "^2.13.1",
+        "@fun-ts/elmish": "*"
     },
     "devDependencies": {
-        "fp-ts": "^2.13.1"
+        "@types/history": "^4.7.11",
+        "fp-ts": "^2.13.1",
+        "@fun-ts/elmish": "*"
     }
 }

@@ -1,5 +1,6 @@
 import { ADTType, makeADT, ofType } from "@morphic-ts/adt";
-import { ElmishResult, InitWithLocation, Location, LocationToMessage, Update, cmd } from "@fun-ts/elmish";
+import { ElmishResult, Update, cmd } from "@fun-ts/elmish";
+import { InitWithLocation, Location, LocationToMessage } from "@fun-ts/elmish-navigation";
 import { Route, unstable_HistoryRouter as Router, Routes, } from "react-router-dom";
 import { history, push } from "./navigation";
 

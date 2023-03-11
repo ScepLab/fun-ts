@@ -1,6 +1,6 @@
 {
-    "name": "@fun-ts/elmish",
-    "description": "Implementation of the elm architecture with typescript.",
+    "name": "@fun-ts/elmish-navigation",
+    "description": "Implementation the navigation of the elm architecture with typescript.",
     "author": {
         "name": "Jonathan Philipps",
         "url": "https://github.com/jphilipps"
@@ -44,10 +44,15 @@
         "- Deliver -----------------------------------------": "echo 'unused'",
         "deliver": "npm publish --access=public"
     },
+    "dependencies": {
+        "history": "^5.3.0"
+    },
     "peerDependencies": {
-        "fp-ts": "^2.13.1"
+        "fp-ts": "^2.13.1",
+        "@fun-ts/elmish": "*"
     },
     "devDependencies": {
-        "fp-ts": "^2.13.1"
+        "fp-ts": "^2.13.1",
+        "@fun-ts/elmish": "*"
     }
 }

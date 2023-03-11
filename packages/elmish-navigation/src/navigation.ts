@@ -1,7 +1,6 @@
 import * as H from "history";
-import * as cmd from "./cmd";
 
-import { ElmishResult, Program } from "./program";
+import { ElmishResult, Program, cmd } from "@fun-ts/elmish";
 
 import { Simplify } from "type-fest";
 import { flow } from "fp-ts/function";

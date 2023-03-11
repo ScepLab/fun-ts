@@ -1,5 +1,5 @@
 import { Msg } from "./app";
-import { navigation } from "@fun-ts/elmish";
+import { navigation } from "@fun-ts/elmish-navigation";
 
 // ============================================================================
 // Navigation

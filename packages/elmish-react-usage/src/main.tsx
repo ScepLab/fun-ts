@@ -1,9 +1,10 @@
 import * as O from "fp-ts/Option";
 
-import { debug, navigation, program } from "@fun-ts/elmish";
+import { debug, program } from "@fun-ts/elmish";
 import { init, locationToMsg, update, view } from "./app";
 
 import { history } from "./navigation";
+import { navigation } from "@fun-ts/elmish-navigation";
 import { pipe } from "fp-ts/function";
 import { withReactSynchronous } from "@fun-ts/elmish-react";
 

@@ -48,6 +48,8 @@
         "- BUILD -------------------------------------------": "echo 'unused'",
         "build": "lerna run build --stream",
         "build-elmish": "lerna run build --stream --scope=@fun-ts/elmish",
+        "build-elmish-navigation": "lerna run build --stream --scope=@fun-ts/elmish-navigation",
+        "build-elmish-navigation-legacy": "lerna run build --stream --scope=@fun-ts/elmish-navigation-legacy",
         "build-elmish-react": "lerna run build --stream --scope=@fun-ts/elmish-react",
         "build-elmish-preact": "lerna run build --stream --scope=@fun-ts/elmish-preact",
         "build-fetch": "lerna run build --stream --scope=@fun-ts/fetch",
