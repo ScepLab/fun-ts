@@ -1,0 +1,46 @@
+{
+    "name": "@fun-ts/elmish-react-legacy-usage",
+    "description": "Shows examples and the usage of the elmish-react-legacy package.",
+    "author": {
+        "name": "Jonathan Philipps",
+        "url": "https://github.com/jphilipps"
+    },
+    "contributors": [
+        {
+            "name": "Thomas Müller",
+            "url": "https://github.com/tmueller"
+        }
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/ScepLab/fun-ts"
+    },
+    "license": "MIT",
+    "version": "0.7.2",
+    "main": "index.js",
+    "types": "./dist/index.d.ts",
+    "sideEffects": false,
+    "scripts": {
+        "dev": "vite",
+        "build": "tsc && vite build",
+        "preview": "vite preview",
+        "check-tsc": "tsc --noEmit --emitDeclarationOnly false -p ./tsconfig.json",
+        "clean": "npm run clean-build && npx rimraf ./node_modules",
+        "clean-build": "npx rimraf ./dist-test && npx rimraf ./dist && npx rimraf ./storybook-static"
+    },
+    "dependencies": {
+        "@fun-ts/elmish": "0.7.2",
+        "@fun-ts/elmish-react-legacy": "^0.7.2",
+        "@fun-ts/elmish-navigation-legacy": "^0.7.2",
+        "react": "<18.0.0",
+        "react-dom": "<18.0.0",
+        "react-router-dom": "6.3.0"
+    },
+    "devDependencies": {
+        "@types/react": "<18.0.0",
+        "@types/react-dom": "<18.0.0",
+        "@types/react-router-dom": "5.3.3",
+        "@vitejs/plugin-react": "2.0.0",
+        "vite": "3.0.4"
+    }
+}
