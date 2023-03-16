@@ -42,7 +42,7 @@
         "fix-eslint": "eslint --fix \"./src/**/*.{ts,tsx}\"",
         "fix-importsort": "import-sort --write ./src/**/*.{ts,tsx}",
         "- Deliver -----------------------------------------": "echo 'unused'",
-        "deliver": "pnpm publish --access=public"
+        "deliver": "pnpm publish --access=public --no-git-checks"
     },
     "dependencies": {
         "react": "<18.0.0",
