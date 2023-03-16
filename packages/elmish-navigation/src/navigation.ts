@@ -1,14 +1,22 @@
 import * as H from "history";
 
 import { ElmishResult, Program, cmd } from "@fun-ts/elmish";
+import type { History, Location } from "history/index";
 
 import { Except } from "type-fest";
 import { flow } from "fp-ts/function";
 
-export type Location = H.Location;
+/**
+ * Error TS2742 occurs when TypeScript is unable to infer the type of a
+ * variable without referencing another variable or module,
+ * typically caused by conflicting modules with the same package ID.
+ * https://github.com/microsoft/TypeScript/issues/47663#issuecomment-1287942723
+ * This types has do be exported manually because of the referred issue.
+ */
+export type { Location, History };
 
 export const elmishifyHistory = <Msg>(
-    history: H.History = H.createHashHistory()
+    history: History = H.createHashHistory()
 ) => ({
     history,
 
@@ -32,7 +40,7 @@ export type InitWithLocation<
 export namespace program {
     export const withNavigation = <Msg>(
         locationToMessage: (location: Location) => Msg,
-        history: H.History,
+        history: History,
     ) => <ChildArg extends InitArgWithLocation, ChildModel, ChildViewResult>(
         child: Program<ChildArg, ChildModel, Msg, ChildViewResult>
     ): Program<
@@ -46,7 +54,7 @@ export namespace program {
         setState: child.setState,
 
         // :( Type assertion
-        init: (p) => child.init({
+        init: p => child.init({
             ...p,
             location: history.location
         } as ChildArg),

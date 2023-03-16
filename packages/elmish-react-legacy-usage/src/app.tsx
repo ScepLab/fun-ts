@@ -1,8 +1,7 @@
 import { ADTType, makeADT, ofType } from "@morphic-ts/adt";
 import { ElmishResult, Update, cmd } from "@fun-ts/elmish";
 import { InitWithLocation, Location, LocationToMessage } from "@fun-ts/elmish-navigation-legacy";
-import { Route, unstable_HistoryRouter as Router, Routes, } from "react-router-dom";
-import { history, push } from "./navigation";
+import { Route, HashRouter as Router } from "react-router-dom";
 
 import { FirstPage } from "./pages/first-page";
 import { HomePage } from "./pages/home-page";
@@ -11,6 +10,7 @@ import React from "react";
 import { ReactView } from "@fun-ts/elmish-react-legacy";
 import { SecondPage } from "./pages/second-page";
 import { pipe } from "fp-ts/function";
+import { push } from "./navigation";
 
 // ============================================================================
 // Model
@@ -88,19 +88,22 @@ export const update: Update<Model, Msg> = (model, msg): UR => pipe(
 // ============================================================================
 export const view: ReactView<Model, Msg> = (dispatch, model) => (
     <React.StrictMode>
-        <Router history={history}>
+        {/* FIXME no history possible yet */}
+        <Router>
             <NavigationContainer onNavigate={(url) => {
                 dispatch(MsgAdt.as.NavigationRequested({ url }));
             }} />
-
-            <Routes>
-                <Route path="/">
-                    <Route index element={<HomePage />} />
-                    <Route path="first-page" element={<FirstPage />} />
-                    <Route path="second-page" element={<SecondPage />} />
-                    <Route path="*" element={<HomePage />} />
+            <Route path="/">
+                <Route path="/first-page">
+                    <FirstPage />
                 </Route>
-            </Routes>
+                <Route path="/second-page">
+                    <SecondPage />
+                </Route>
+                <Route path="*">
+                    <HomePage />
+                </Route>
+            </Route>
         </Router>
         <pre>
             {JSON.stringify(model.currentLocation, null, 4)}

@@ -4,5 +4,6 @@ export const navigation = { program, elmishifyHistory };
 export type {
     InitWithLocation,
     LocationToMessage,
-    Location
+    Location,
+    History,
 } from "./navigation";
