@@ -27,22 +27,22 @@
     ],
     "scripts": {
         "- BUILD -------------------------------------------": "echo 'unused'",
-        "build": "npm run -s clean-build && tsc -p ./tsconfig.json --composite false && node ./esbuild.config.js",
+        "build": "pnpm run -s clean-build && tsc -p ./tsconfig.json --composite false && node ./esbuild.config.js",
         "- CLEAN -------------------------------------------": "echo 'unused'",
-        "clean": "npm run -s clean-build",
+        "clean": "pnpm run -s clean-build",
         "clean-build": "rimraf ./dist-test && rimraf ./dist",
         "- CHECK -------------------------------------------": "echo 'unused'",
-        "check": "npm run -s check-eslint && npm run -s check-cspell && npm run -s check-tsc && npm run -s check-importsort",
+        "check": "pnpm run -s check-eslint && pnpm run -s check-cspell && pnpm run -s check-tsc && pnpm run -s check-importsort",
         "check-eslint": "eslint \"./src/**/*.{ts,tsx}\"",
         "check-cspell": "cspell ./src/**/*.{ts,tsx} ./src/**/*.html ./src/**/*.less ./src/**/*.sass ./src/**/*.css",
         "check-tsc": "tsc --noEmit --emitDeclarationOnly false",
         "check-importsort": "import-sort -l ./src/**/*.{ts,tsx}",
         "- FIX ---------------------------------------------": "echo 'unused'",
-        "fix": "npm run -s fix-eslint && npm run -s fix-importsort",
+        "fix": "pnpm run -s fix-eslint && pnpm run -s fix-importsort",
         "fix-eslint": "eslint --fix \"./src/**/*.{ts,tsx}\"",
         "fix-importsort": "import-sort --write ./src/**/*.{ts,tsx}",
         "- Deliver -----------------------------------------": "echo 'unused'",
-        "deliver": "npm publish --access=public"
+        "deliver": "pnpm publish --access=public"
     },
     "peerDependencies": {
         "fp-ts": "^2.13.1"

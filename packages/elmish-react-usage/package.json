@@ -25,13 +25,14 @@
         "build": "tsc && vite build",
         "preview": "vite preview",
         "check-tsc": "tsc --noEmit --emitDeclarationOnly false -p ./tsconfig.json",
-        "clean": "npm run clean-build && npx rimraf ./node_modules",
+        "clean": "pnpm run clean-build && npx rimraf ./node_modules",
         "clean-build": "npx rimraf ./dist-test && npx rimraf ./dist && npx rimraf ./storybook-static"
     },
     "dependencies": {
+        "@morphic-ts/adt": "3.0.0",
         "@fun-ts/elmish": "0.7.2",
-        "@fun-ts/elmish-react": "^0.7.2",
-        "@fun-ts/elmish-navigation": "^0.7.2",
+        "@fun-ts/elmish-react": "0.7.2",
+        "@fun-ts/elmish-navigation": "0.7.2",
         "react": "18.2.0",
         "react-dom": "18.2.0",
         "react-router-dom": "6.3.0"

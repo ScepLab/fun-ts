@@ -22,7 +22,7 @@
     "engineStrict": true,
     "engines": {
         "node": ">=18.15.0",
-        "npm": ">=9.5.0"
+        "pnpm": ">=7.29.1"
     },
     "keywords": [
         "fun",
@@ -37,7 +37,7 @@
     ],
     "scripts": {
         "- SETUP -------------------------------------------": "echo 'unused'",
-        "init": "npm run clean-build && npx husky i -y && npm i && npm run check-build",
+        "init": "pnpm run clean-build && npx husky i -y && pnpm i && pnpm run check-build",
         "clean": "npx lerna run clean --stream && npx rimraf ./node_modules",
         "clean-build": "npx lerna run clean-build --stream && npx rimraf ./dist && npx rimraf ./dist-test",
         "update-changelog": "env-cmd lerna-changelog",
@@ -66,8 +66,8 @@
         "test-rest": "lerna run test --stream --scope=@fun-ts/rest",
         "test-usage": "lerna run test --stream --scope=@fun-ts/usage",
         "- CHECK -------------------------------------------": "echo 'unused'",
-        "check-build": "npm run build && npm run test && npm run check",
-        "check": "npm run check-package-json && lerna run check --stream",
+        "check-build": "pnpm run build && pnpm run test && pnpm run check",
+        "check": "pnpm run check-package-json && lerna run check --stream",
         "check-elmish": "lerna run check --stream --scope=@fun-ts/elmish",
         "check-fetch": "lerna run check --stream --scope=@fun-ts/fetch",
         "check-rest": "lerna run check --stream --scope=@fun-ts/rest",
@@ -85,7 +85,7 @@
         "fix-usage": "lerna run fix --stream --scope=@fun-ts/usage",
         "- Deliver -----------------------------------------": "echo 'unused'",
         "deliver": "lerna run deliver --stream",
-        "deliver-check": "npm run build && npm run check && npm run test",
+        "deliver-check": "pnpm run build && pnpm run check && pnpm run test",
         "deliver-elmish": "lerna run deliver --stream --scope=@fun-ts/elmish",
         "deliver-elmish-react": "lerna run deliver --stream --scope=@fun-ts/elmish-react",
         "deliver-elmish-preact": "lerna run deliver --stream --scope=@fun-ts/elmish-preact",
@@ -106,7 +106,6 @@
         "npm-package-json-lint": "6.3.0",
         "env-cmd": "10.1.0",
         "lerna-changelog": "2.2.0",
-        "npm-run-all": "4.1.5",
         "lerna": "5.6.2",
         "@faker-js/faker": "7.5.0",
         "eslint": "8.25.0",

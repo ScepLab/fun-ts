@@ -13,11 +13,11 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: 18.15.0
-          registry-url: "https://registry.npmjs.org"
-      - run: npm ci
-      - run: npm run build
-      - run: npm run check
-      - run: npm run test
-      - run: npm run deliver
+          registry-url: "https://registry.pnpmjs.org"
+      - run: pnpm ci
+      - run: pnpm run build
+      - run: pnpm run check
+      - run: pnpm run test
+      - run: pnpm run deliver
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.pnpm_TOKEN }}
