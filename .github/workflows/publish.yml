@@ -8,13 +8,17 @@ on:
 jobs:
   build:
     runs-on: ubuntu-22.04
+
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
         with:
           node-version: 18.15.0
-          registry-url: "https://registry.pnpmjs.org"
-      - run: pnpm ci
+
+      - name: install pnpm
+        run: npm i -g pnpm@7.29.1
+
+      - run: pnpm i
       - run: pnpm run build
       - run: pnpm run check
       - run: pnpm run test
