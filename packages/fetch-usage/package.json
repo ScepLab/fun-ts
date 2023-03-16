@@ -16,13 +16,13 @@
         "url": "https://github.com/ScepLab/fun-ts"
     },
     "license": "MIT",
-    "version": "0.8.0",
+    "version": "0.8.1",
     "module": "./dist/index.js",
     "main": "./dist/index.cjs",
     "types": "./dist/index.d.ts",
     "type": "module",
     "sideEffects": false,
     "dependencies": {
-        "@fun-ts/fetch": "^0.8.0"
+        "@fun-ts/fetch": "^0.8.1"
     }
 }
