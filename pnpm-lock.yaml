@@ -95,7 +95,7 @@ importers:
         version: 5.3.0
     devDependencies:
       '@fun-ts/elmish':
-        specifier: 0.7.2
+        specifier: ^0.8.0
         version: link:../elmish
 
   packages/elmish-navigation-legacy:
@@ -105,7 +105,7 @@ importers:
         version: 4.10.1
     devDependencies:
       '@fun-ts/elmish':
-        specifier: 0.7.2
+        specifier: ^0.8.0
         version: link:../elmish
       '@types/history':
         specifier: 4.7.11
@@ -118,7 +118,7 @@ importers:
         version: 10.13.1
     devDependencies:
       '@fun-ts/elmish':
-        specifier: 0.7.2
+        specifier: ^0.8.0
         version: link:../elmish
 
   packages/elmish-react:
@@ -131,7 +131,7 @@ importers:
         version: 18.2.0(react@18.2.0)
     devDependencies:
       '@fun-ts/elmish':
-        specifier: 0.7.2
+        specifier: ^0.8.0
         version: link:../elmish
       '@types/react':
         specifier: 18.0.0
@@ -150,7 +150,7 @@ importers:
         version: 17.0.2(react@17.0.2)
     devDependencies:
       '@fun-ts/elmish':
-        specifier: 0.7.2
+        specifier: ^0.8.0
         version: link:../elmish
       '@types/react':
         specifier: <18.0.0
@@ -162,13 +162,13 @@ importers:
   packages/elmish-react-legacy-usage:
     dependencies:
       '@fun-ts/elmish':
-        specifier: 0.7.2
+        specifier: ^0.8.0
         version: link:../elmish
       '@fun-ts/elmish-navigation-legacy':
-        specifier: 0.7.2
+        specifier: ^0.8.0
         version: link:../elmish-navigation-legacy
       '@fun-ts/elmish-react-legacy':
-        specifier: 0.7.2
+        specifier: ^0.8.0
         version: link:../elmish-react-legacy
       '@morphic-ts/adt':
         specifier: 3.0.0
@@ -202,13 +202,13 @@ importers:
   packages/elmish-react-usage:
     dependencies:
       '@fun-ts/elmish':
-        specifier: 0.7.2
+        specifier: ^0.8.0
         version: link:../elmish
       '@fun-ts/elmish-navigation':
-        specifier: 0.7.2
+        specifier: ^0.8.0
         version: link:../elmish-navigation
       '@fun-ts/elmish-react':
-        specifier: 0.7.2
+        specifier: ^0.8.0
         version: link:../elmish-react
       '@morphic-ts/adt':
         specifier: 3.0.0
@@ -246,12 +246,12 @@ importers:
         version: 3.1.5
       io-ts:
         specifier: 2.2.20
-        version: 2.2.20(fp-ts@2.13.1)
+        version: 2.2.20
 
   packages/fetch-usage:
     dependencies:
       '@fun-ts/fetch':
-        specifier: ^0.7.2
+        specifier: ^0.8.0
         version: link:../fetch
 
   packages/remote-result-adt:
@@ -263,7 +263,7 @@ importers:
   packages/rest:
     devDependencies:
       '@fun-ts/fetch':
-        specifier: 0.7.2
+        specifier: ^0.8.0
         version: link:../fetch
       '@types/express-serve-static-core':
         specifier: 4.17.28
@@ -272,7 +272,7 @@ importers:
   packages/rest-client:
     devDependencies:
       '@fun-ts/fetch':
-        specifier: 0.7.2
+        specifier: ^0.8.0
         version: link:../fetch
       '@morphic-ts/adt':
         specifier: 3.0.0
@@ -282,7 +282,7 @@ importers:
         version: 3.1.5
       io-ts:
         specifier: 2.2.20
-        version: 2.2.20(fp-ts@2.13.1)
+        version: 2.2.20
 
   packages/rest-usage:
     dependencies:
@@ -291,7 +291,7 @@ importers:
         version: 4.18.2
     devDependencies:
       '@fun-ts/rest':
-        specifier: 0.7.2
+        specifier: ^0.8.0
         version: link:../rest
       '@types/express':
         specifier: 4.17.13
@@ -6077,12 +6077,10 @@ packages:
     engines: {node: '>=4'}
     dev: true
 
-  /io-ts@2.2.20(fp-ts@2.13.1):
+  /io-ts@2.2.20:
     resolution: {integrity: sha512-Rq2BsYmtwS5vVttie4rqrOCIfHCS9TgpRLFpKQCM1wZBBRY9nWVGmEvm2FnDbSE2un1UE39DvFpTR5UL47YDcA==}
     peerDependencies:
       fp-ts: ^2.5.0
-    dependencies:
-      fp-ts: 2.13.1
     dev: true
 
   /ip@2.0.0:
@@ -8251,6 +8249,15 @@ packages:
       scheduler: 0.20.2
     dev: false
 
+  /react-dom@18.2.0:
+    resolution: {integrity: sha512-6IMTriUmvsjHUjNtEDudZfuDQUoWXVxKHhlEGSk81n4YFS+r/Kl99wXiwlVXtPBtJenozv2P+hxDsw9eA7Xo6g==}
+    peerDependencies:
+      react: ^18.2.0
+    dependencies:
+      loose-envify: 1.4.0
+      scheduler: 0.23.0
+    dev: true
+
   /react-dom@18.2.0(react@18.2.0):
     resolution: {integrity: sha512-6IMTriUmvsjHUjNtEDudZfuDQUoWXVxKHhlEGSk81n4YFS+r/Kl99wXiwlVXtPBtJenozv2P+hxDsw9eA7Xo6g==}
     peerDependencies:
@@ -8259,6 +8266,7 @@ packages:
       loose-envify: 1.4.0
       react: 18.2.0
       scheduler: 0.23.0
+    dev: false
 
   /react-is@16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
@@ -8335,6 +8343,7 @@ packages:
     engines: {node: '>=0.10.0'}
     dependencies:
       loose-envify: 1.4.0
+    dev: false
 
   /read-cmd-shim@3.0.1:
     resolution: {integrity: sha512-kEmDUoYf/CDy8yZbLTmhB1X9kkjf9Q80PCNsDMb7ufrGd6zZSQA1+UyjrO+pZm5K/S4OXCWJeiIt1JA8kAsa6g==}
@@ -8628,7 +8637,7 @@ packages:
       '@types/react': 18.0.21
       cheerio: 1.0.0-rc.12
       esm: 3.2.25
-      react-dom: 18.2.0(react@18.2.0)
+      react-dom: 18.2.0
       tape: 5.6.1
     transitivePeerDependencies:
       - react
