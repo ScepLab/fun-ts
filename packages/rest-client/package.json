@@ -45,7 +45,7 @@
         "deliver": "pnpm publish --access=public"
     },
     "peerDependencies": {
-        "@fun-ts/fetch": "^0.7.2",
+        "@fun-ts/fetch": "^0.8.0",
         "@morphic-ts/adt": "^3.0.0",
         "io-ts": "^2.2.20"
     },
