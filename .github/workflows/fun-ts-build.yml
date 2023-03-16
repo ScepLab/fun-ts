@@ -15,7 +15,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 18.15.0
-          run: npm install -g pnpm@6.16.0
+          cache: "pnpm"
 
       - run: pnpm ci
       - run: pnpm run build --if-present
