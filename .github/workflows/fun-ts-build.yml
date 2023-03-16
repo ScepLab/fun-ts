@@ -9,16 +9,14 @@ on:
 jobs:
   build:
     runs-on: ubuntu-22.04
-    strategy:
-      matrix:
-        node-version: [18.15.0]
+
     steps:
-      - uses: actions/checkout@v2
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v2
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
         with:
-          node-version: ${{ matrix.node-version }}
-          cache: "pnpm"
+          node-version: 18.15.0
+          run: npm install -g pnpm@6.16.0
+
       - run: pnpm ci
       - run: pnpm run build --if-present
       - run: pnpm run check --if-present
