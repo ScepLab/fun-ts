@@ -17,6 +17,9 @@ jobs:
           node-version: 18.15.0
           cache: "pnpm"
 
+      - name: install pnpm
+        run: npm i -g pnpm@7.29.1
+
       - run: pnpm ci
       - run: pnpm run build --if-present
       - run: pnpm run check --if-present
