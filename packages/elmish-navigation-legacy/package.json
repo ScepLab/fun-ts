@@ -49,7 +49,7 @@
     },
     "peerDependencies": {
         "fp-ts": "^2.13.1",
-        "@fun-ts/elmish": "0.7.2"
+        "@fun-ts/elmish": "^0.7.2"
     },
     "devDependencies": {
         "@fun-ts/elmish": "0.7.2",
