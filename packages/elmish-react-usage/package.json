@@ -16,7 +16,7 @@
         "url": "https://github.com/ScepLab/fun-ts"
     },
     "license": "MIT",
-    "version": "0.8.4",
+    "version": "0.8.5",
     "main": "index.js",
     "types": "./dist/index.d.ts",
     "sideEffects": false,
@@ -29,9 +29,9 @@
         "clean-build": "npx rimraf ./dist-test && npx rimraf ./dist && npx rimraf ./storybook-static"
     },
     "dependencies": {
-        "@fun-ts/elmish": "^0.8.4",
-        "@fun-ts/elmish-navigation": "^0.8.4",
-        "@fun-ts/elmish-react": "^0.8.4",
+        "@fun-ts/elmish": "^0.8.5",
+        "@fun-ts/elmish-navigation": "^0.8.5",
+        "@fun-ts/elmish-react": "^0.8.5",
         "@morphic-ts/adt": "3.0.0",
         "react": "18.2.0",
         "react-dom": "18.2.0",

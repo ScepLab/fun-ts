@@ -16,7 +16,7 @@
         "url": "https://github.com/ScepLab/fun-ts"
     },
     "license": "MIT",
-    "version": "0.8.4",
+    "version": "0.8.5",
     "module": "./dist/index.js",
     "main": "./dist/index.cjs",
     "types": "./dist/index.d.ts",
@@ -50,7 +50,7 @@
         "io-ts": "^2.2.20"
     },
     "devDependencies": {
-        "@fun-ts/fetch": "^0.8.4",
+        "@fun-ts/fetch": "^0.8.5",
         "@morphic-ts/adt": "3.0.0",
         "cross-fetch": "3.1.5",
         "io-ts": "2.2.20"

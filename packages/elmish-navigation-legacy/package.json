@@ -16,7 +16,7 @@
         "url": "https://github.com/ScepLab/fun-ts"
     },
     "license": "MIT",
-    "version": "0.8.4",
+    "version": "0.8.5",
     "module": "./dist/index.js",
     "main": "./dist/index.cjs",
     "types": "./dist/index.d.ts",
@@ -52,7 +52,7 @@
         "fp-ts": "^2.13.1"
     },
     "devDependencies": {
-        "@fun-ts/elmish": "^0.8.4",
+        "@fun-ts/elmish": "^0.8.5",
         "@types/history": "4.7.11"
     }
 }
