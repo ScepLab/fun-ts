@@ -19,7 +19,7 @@ jobs:
       - name: install pnpm
         run: npm i -g pnpm@7.29.1
 
-      - run: pnpm ci
+      - run: pnpm i
       - run: pnpm run build --if-present
       - run: pnpm run check --if-present
       - run: pnpm run test --if-present
