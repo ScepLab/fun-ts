@@ -20,6 +20,6 @@ jobs:
         run: npm i -g pnpm@7.29.1
 
       - run: pnpm i
-      - run: pnpm run build --if-present
-      - run: pnpm run check --if-present
-      - run: pnpm run test --if-present
+      - run: pnpm run build
+      - run: pnpm run check
+      - run: pnpm run test
