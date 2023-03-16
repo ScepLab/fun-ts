@@ -22,6 +22,6 @@ jobs:
       - run: pnpm run build
       - run: pnpm run check
       - run: pnpm run test
-      - run: pnpm run deliver
+      - run: pnpm run deliver --no-git-checks
         env:
           NODE_AUTH_TOKEN: ${{ secrets.pnpm_TOKEN }}
