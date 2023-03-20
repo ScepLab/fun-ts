@@ -5,20 +5,6 @@
 </p>
 
 <p align="center">
-    <a href="https://github.com/jphilipps/fun-ts/actions/workflows/fun-ts-build.yml">
-      <img 
-        alt="GitHub build status" 
-        src="https://github.com/jphilipps/fun-ts/actions/workflows/fun-ts-build.yml/badge.svg">
-    </a>
-    <a href="https://github.com/jphilipps/fun-ts/actions/workflows/publish.yml">
-      <img 
-        alt="GitHub npm publish status"
-        src="https://github.com/jphilipps/fun-ts/actions/workflows/publish.yml/badge.svg"
-      >
-    </a>
-</p>
-
-<p align="center">
     @fun-ts/elmish
 </p>
 <p align="center">
@@ -145,6 +131,11 @@
         src="https://img.shields.io/npm/dm/@fun-ts/rest.svg?maxAge=43200">
     </a>
 </p>
+
+
+## library overview
+
+![overview libraries](./images/fun-ts-overview.png)
 
 ## Contribution and guidelines for developer
 
